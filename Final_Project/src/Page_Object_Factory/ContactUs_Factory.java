@@ -52,7 +52,7 @@ public class ContactUs_Factory  extends Base_Project
 
 	{
 		this.driver = driver;
-//commit
+//commit another change
 		
 	}
 	// Need to set functions to click on The links in the header according to test case  submitMessage
