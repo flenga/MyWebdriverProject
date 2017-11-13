@@ -54,7 +54,7 @@ public class ContactUs_Factory  extends Base_Project
 		this.driver = driver;
 //commit another change
 	//change 3 	
-		
+		//new comment done on 13/11/2017 22:31 PM
 	}
 	// Need to set functions to click on The links in the header according to test case  submitMessage
 	public void SendAmessage() throws Exception 
