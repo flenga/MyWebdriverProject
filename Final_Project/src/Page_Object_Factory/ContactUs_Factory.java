@@ -48,8 +48,6 @@ public class ContactUs_Factory  extends Base_Project
 	public WebElement Filename;
 
 	public ContactUs_Factory(WebDriver driver)
-
-
 	{
 		this.driver = driver;
 	}
