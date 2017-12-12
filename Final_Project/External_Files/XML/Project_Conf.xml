@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Environment>
+    <BrowserType>Chrome</BrowserType>
+    <FFDriverPath>External_Files/Drivers/FF/geckodriver.exe</FFDriverPath>
+    <IEDriverPath>External_Files/Drivers/IE/IEDriverServer.exe</IEDriverPath>
+    <ChromeDriverPath>External_Files/Drivers/Chrome/chromedriver.exe</ChromeDriverPath>
+    <URL>http://yoniflenner.net/prestashop/index.php</URL>
+    
+  <!-- Images to compare-path -->
+ <ImagePath>External_Files//Sikuli_Images//</ImagePath> 
+  
+ <!-- report-->
+<ScreenshotsReportFilePath>/Project_Reports/</ScreenshotsReportFilePath>
+<ReportFilePath>External_Files//Project_Reports//</ReportFilePath>
+<Reporfilename>_prestashop-E-Commerce-Run.html</Reporfilename>
+
+<!-- Connection to Excel -->
+<ExcelFilePath>External_Files/Excels/</ExcelFilePath>
+</Environment>

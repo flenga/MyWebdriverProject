@@ -1,6 +1,4 @@
 package Page_Object_Factory;
-
-//import java.util.ArrayList;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,17 +20,17 @@ public class ContactUs_Factory  extends Base_Project
 
 	@FindBy(how = How.ID, using= "email")
 	public WebElement email;
-
-	@FindBy(how = How.ID, using= "id_order")//In case user is sign in and has orders it become selection
+	//In case user is sign in and has orders it become selection
+	@FindBy(how = How.ID, using= "id_order")
 	public WebElement OrderRef;
-
-	@FindBy(how = How.XPATH, using= "//*[@id='fileUpload']")//Upload file button fileUpload 
+	//Upload file button fileUpload 
+	@FindBy(how = How.ID, using= "fileUpload")
 	public WebElement fileUploadButton;
 
 	@FindBy(how = How.ID, using= "message")
 	public WebElement message;
 
-	@FindBy(how = How.ID, using= "submitMessage") //submitMessage
+	@FindBy(how = How.ID, using= "submitMessage")
 	public WebElement SubmitMessage;
 
 	@FindBy(how = How.XPATH, using= " //*[@id='center_column']/div/ol/li") 
@@ -46,16 +44,22 @@ public class ContactUs_Factory  extends Base_Project
 
 	@FindBy(how = How.CSS, using= "span.filename")
 	public WebElement Filename;
-	//This comment been created via GitHub
+
 	public ContactUs_Factory(WebDriver driver)
 	{
 		this.driver = driver;
 	}
-	// Need to set functions to click on The links in the header according to test case  submitMessage
+	
 	public void SendAmessage() throws Exception 
 	{
+		/*
+		 Reading from Excel file and get the data from this file, wrkbook.getSheet(0) 
+		 refer to the first tab in the file, running through a loop
+		 to collect the data getCell(4,i) the first number represent the column
+		 and the second value represent the row. 
+		*/
 		cf.ReadExcelFile();
-		int rowcount=cf.wrkbook.getSheet(1 ).getRows();
+		int rowcount=cf.wrkbook.getSheet(1).getRows();
 		for(int i=1;i<=rowcount;i++)
 		{
 			try 
@@ -76,15 +80,19 @@ public class ContactUs_Factory  extends Base_Project
 				ValuToreport=SubmitMessage.getAttribute("name");
 				cf.ClickOnElement(SubmitMessage,ValuToreport);
 				Thread.sleep(3000);
-				logger.info("ContactUs form submitted!");
+				logger.info("ContactUs Form submitted!");
 				test.log(LogStatus.PASS, "ContactUs form submitted!");
+				/*
+				 * This check if the error is green or red and according to the color 
+				 * received continue!!
+				 */
 				if(ExpectedColor1.equals("red"))
 				{
-					cf.NoErrorMessageExsit(cf.verifyElementExist(ErrorDiv), ExpectedColor1,ExpectedMessage1);//"Invalid email address.");   message:"The message cannot be blank."  this should be change to ddt mechanism need to create 
+					cf.NoErrorMessageExsit(ErrorDiv, ExpectedColor1,ExpectedMessage1);
 				}	
 				else
 				{
-					cf.NoErrorMessageExsit(cf.verifyElementExist(SuccessDiv), ExpectedColor1,ExpectedMessage1);
+					cf.NoErrorMessageExsit(SuccessDiv, ExpectedColor1,ExpectedMessage1);
 				}
 				if(i<rowcount)
 				{

@@ -1,13 +1,10 @@
 package Page_Object_Factory;
 
 import java.util.List;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-
-
 import Project_Utilities.Base_Project;
 import Project_Utilities.Project_CommonFunction;
 
@@ -42,16 +39,16 @@ public class Registration_Factory extends Base_Project
 	@FindBy(how = How.NAME,using= "submitAccount")
 	public WebElement RegisterButton; 
 	
-	//Error
+	//Error message
 	@FindBy(how = How.XPATH,using= "//*[@id='center_column']/div")
 	public WebElement ErrorMessage; 
 	
-	public Registration_Factory(WebDriver driver) // 
+	public Registration_Factory(WebDriver driver) 
 	{
 		Registration_Factory.driver = driver;
 	}
 	
-	public void FindElementsOnPage() throws Exception
+	public void FindElementsOnPage() throws Throwable
 	{
 		
 		cf.SplitTheDate("23/8/1956");
@@ -74,7 +71,6 @@ public class Registration_Factory extends Base_Project
 		cf.waitToElement(ErrorMessage);  
 		cf.verifyElementExist(ErrorMessage);
 		Thread.sleep(500);
-		
 	}
 }
 

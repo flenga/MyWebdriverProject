@@ -1,69 +1,65 @@
 package Page_Object_Factory;
 
-import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-
+import com.relevantcodes.extentreports.LogStatus;
 import Project_Utilities.Base_Project;
 import Project_Utilities.Project_CommonFunction;
 public class SearchToShopping_Factory extends Base_Project
 {
 	Project_CommonFunction cf = new Project_CommonFunction();
+	
 	private String ValueSendToreport;
-	//@FindBy(how = How.CSS,using= "span.ajax_cart_product_txt_s") // 
-	@FindBy(how = How.XPATH,using= "//*[@id='layer_cart']/div[1]/div[1]/span[1]") 
-	public WebElement TitleShoppingDiv;  //Blouse
-	
-	@FindBy(how = How.CSS,using= "span.ajax_block_products_total")  // //*[@id="layer_cart"]/div[1]/div[2]/div[1]/span
-	public WebElement TotalProducts; 
-	/*
-	@FindBy(how = How.CSS,using= "span.ajax_cart_shipping_cost unvisible") 
-	public WebElement Totalshipping;
-	
-	@FindBy(how = How.CSS,using= "span.ajax_block_cart_total") 
-	public WebElement TotalIncluds;
+	public String ShoppingCartAfter;
 
-	@FindBy(how = How.ID,using= "layer_cart_product_title") 
-	public WebElement ProductTitle;
-	*/
+	@FindBy(how = How.XPATH,using="//*[@id='layer_cart']/div[1]")
+	public WebElement ContainarDiv; 
+
+	@FindBy(how = How.XPATH,using= "//*[@id='layer_cart']/div[1]/div[1]/span[1]") 
+	public WebElement TitleShoppingDiv;
+	
+	@FindBy(how = How.XPATH,using= "//*[@id='layer_cart']/div[1]/div[2]/div[1]/span") 
+	public WebElement TotalProductsDiv; 
+
 	@FindBy(how = How.CSS,using= "span.cross[title=’Close window’]") 
 	public WebElement CloseDiv;
-	
-	//@FindBy(how = How.CSS,using= "span.cross[title=’Close window’]") 
-		@FindBy(how = How.XPATH,using= "//*[@id='layer_cart']/div[1]/div[1]/span[1]") 
-		public WebElement CloseDiv1;
-		
-		//@FindBy(how = How.CSS,using= "span.ajax_cart_product_txt_s") // 
-		@FindBy(how = How.XPATH,using= "//*[@id='layer_cart']/div[1]/div[2]/span")    //*[@id="layer_cart"]/div[1]/div[2]
-		public WebElement TitleShoppingDiv1;  //Blouse
-		
-		@FindBy(how = How.XPATH,using= "//*[@id='layer_cart']/div[1]/div[2]/div[1]/span") 
-		public WebElement TotalProducts1;
-		
-		//@FindBy(how = How.CSS,using= "span.ajax_cart_shipping_cost unvisible") 
-		@FindBy(how = How.XPATH,using= "//*[@id='layer_cart']/div[1]/div[2]/div[2]/span") 
-		public WebElement Totalshipping; 
-		//*[@id='layer_cart']/div[1]/div[2]/div[3]/span
-		@FindBy(how = How.XPATH,using= "//*[@id='layer_cart']/div[1]/div[2]/div[3]/span") 
-		//@FindBy(how = How.CSS,using= "span.ajax_block_cart_total") 
-		public WebElement TotalIncluds;
 
-		@FindBy(how = How.XPATH,using= "//*[@id='layer_cart_product_title']") 
-		//@FindBy(how = How.ID,using= "layer_cart_product_title") 
-		public WebElement ProductTitle;
+	@FindBy(how = How.XPATH,using= "//*[@id='layer_cart']/div[1]/div[1]/span[1]") 
+	public WebElement CloseDiv1;
+
+	@FindBy(how = How.XPATH,using= "//*[@id='layer_cart']/div[1]/div[2]/span/span[2]")   
+	public WebElement TitleShoppingDiv1; 
+
+	@FindBy(how = How.XPATH,using= "//*[@id='layer_cart']/div[1]/div[2]/div[1]/span") 
+	public WebElement TotalProducts1;
+
+	@FindBy(how = How.XPATH,using= "//*[@id='layer_cart']/div[1]/div[2]/div[2]/span") 
+	public WebElement TotalshippingDiv; 
+
+	@FindBy(how = How.XPATH,using= "//*[@id='layer_cart']/div[1]/div[2]/div[3]/span") 
+	public WebElement TotalIncludsDiv;
+
+	@FindBy(how = How.XPATH,using= "//*[@id='layer_cart_product_title']") 
+	public WebElement ProductTitleDiv;
+
+	@FindBy(how = How.CSS,using= "div.shopping_cart") 
+	public WebElement ShoppingCart;
 	
 	public void VerifyElementIndiv() throws Exception
 	{
-	TitleShoppingDiv1.isDisplayed();	
-	Assert.assertEquals(TitleShoppingDiv1.getText(), "There is 1 item in your cart.");
-	Assert.assertEquals(TotalProducts.getText(), "$24.00");
-	Assert.assertEquals(Totalshipping.getText(), "$7.00"); //TotalIncluds
-	Assert.assertEquals(TotalIncluds.getText(), "$31.00");
-	Assert.assertEquals(ProductTitle.getText(), "Blouse");
-	ValueSendToreport=CloseDiv.getAttribute("title");
-	cf.ClickOnElement(CloseDiv,ValueSendToreport);
+		ValueSendToreport=CloseDiv.getAttribute("title");
+		cf.ClickOnElement(CloseDiv,ValueSendToreport);
+		try 
+		{
+			ShoppingCartAfter=ShoppingCart.getText();
+			logger.info("The Element: "+ ShoppingCartAfter+" appear  !!");
+			test.log(LogStatus.PASS, "The Element :"+ ShoppingCartAfter+"  appear !!");
+		}
+		catch(Exception e) 
+		{
+			logger.error("Failed to get the text from "+ShoppingCart+"  : "+e.getMessage());
+			test.log(LogStatus.FAIL,"Failed to get text from "+ ShoppingCart+"  :  see screenshot: "+e.getMessage()+" "+test.addScreenCapture(getscreenshot()));
+		}
 	}
-
-
 }
