@@ -4164,3 +4164,370 @@ Map is displayed on page!!
 2017-12-12 22:08:53,093 INFO  [Base_Project] - The Elements are displayed on page!!
 2017-12-12 22:08:53,692 INFO  [Project_CommonFunction] - Clicked on the Element: "Close window" with success 
 2017-12-12 22:08:54,740 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-12-12 22:56:27,672 INFO  [Base_Project] - Open brwoser :Chrome
+2017-12-12 22:56:37,126 INFO  [Base_Project] - Store locator - Start test #1
+2017-12-12 22:56:40,017 INFO  [Project_CommonFunction] - Clicked on the Element: "Our stores" with success 
+2017-12-12 22:56:40,252 INFO  [Project_CommonFunction] - The Element Map data ©2017 Google, INEGI
+Terms of Use
+Map is displayed on page!!
+2017-12-12 22:56:41,393 INFO  [Project_CommonFunction] - The image StoreToPNG.png exist!!
+2017-12-12 22:56:42,851 INFO  [Project_CommonFunction] - Clicked on Image:  StoreToPNG.png !!
+2017-12-12 22:56:43,781 INFO  [Project_CommonFunction] - The image StoreDirectionsMiami.png exist!!
+2017-12-12 22:56:44,663 INFO  [Project_CommonFunction] - The image ClosePopup.png exist!!
+2017-12-12 22:56:46,047 INFO  [Project_CommonFunction] - Clicked on Image:  ClosePopup.png !!
+2017-12-12 22:56:46,047 INFO  [Base_Project] - End of Test!!!
+2017-12-12 22:56:46,049 INFO  [Base_Project] - Sign in - Start test #2
+2017-12-12 22:56:48,837 INFO  [Project_CommonFunction] - Clicked on the Element: "Sign in" with success 
+2017-12-12 22:56:48,956 INFO  [Project_CommonFunction] - succeed to read from Excel 
+2017-12-12 22:56:49,228 INFO  [Project_CommonFunction] - Succeeded to send from field :"email" the value: "publisherpete4@gmail.com"
+2017-12-12 22:56:49,375 INFO  [Project_CommonFunction] - Succeeded to send from field :"passwd" the value: "qwerty321"
+2017-12-12 22:56:51,232 INFO  [Project_CommonFunction] - The message that appear was :Welcome to your account. Here you can manage all of your personal information and orders.
+2017-12-12 22:56:51,232 INFO  [Base_Project] - Cradiantial publisherpete4@gmail.com, and Password: qwerty321were OK
+2017-12-12 22:56:52,724 INFO  [Base_Project] - Clicked on signout
+2017-12-12 22:56:52,951 INFO  [Project_CommonFunction] - Succeeded to send from field :"email" the value: "publisherpete@gmail.com"
+2017-12-12 22:56:53,064 INFO  [Project_CommonFunction] - Succeeded to send from field :"passwd" the value: "123456"
+2017-12-12 22:56:53,977 INFO  [Project_CommonFunction] - The message that appear was :Authentication failed.
+2017-12-12 22:56:53,977 INFO  [Base_Project] - Cradiantial publisherpete@gmail.com, and Password: 123456were OK - Which FAILED to login
+2017-12-12 22:56:55,067 INFO  [Project_CommonFunction] - Clicked on the Element: "Log in to your customer account" with success 
+2017-12-12 22:56:55,067 INFO  [Base_Project] - End of Test!!!
+2017-12-12 22:56:55,068 INFO  [Base_Project] - Send Contact Us Form - Start test #3
+2017-12-12 22:56:56,246 INFO  [Project_CommonFunction] - Clicked on the Element: "Contact us" with success 
+2017-12-12 22:56:56,291 INFO  [Project_CommonFunction] - succeed to read from Excel 
+2017-12-12 22:56:56,520 INFO  [Project_CommonFunction] -  Element selected with success 
+2017-12-12 22:56:56,685 INFO  [Project_CommonFunction] - Succeeded to send from field :"email" the value: "Publisherpetemail.com"
+2017-12-12 22:56:56,818 INFO  [Project_CommonFunction] - Succeeded to send from field :"id_order" the value: "123456"
+2017-12-12 22:56:56,938 INFO  [Project_CommonFunction] - Clicked on the Element: "fileUpload" with success 
+2017-12-12 22:57:03,275 INFO  [Project_CommonFunction] - This Action succeed.
+2017-12-12 22:57:03,429 INFO  [Project_CommonFunction] - Succeeded to send from field :"message" the value: "This is a test"
+2017-12-12 22:57:04,651 INFO  [Project_CommonFunction] - Clicked on the Element: "submitMessage" with success 
+2017-12-12 22:57:07,652 INFO  [Base_Project] - ContactUs Form submitted!
+2017-12-12 22:57:07,735 INFO  [Project_CommonFunction] - The message that appear was :Invalid email address.
+2017-12-12 22:57:08,834 INFO  [Project_CommonFunction] -  Element selected with success 
+2017-12-12 22:57:09,001 INFO  [Project_CommonFunction] - Succeeded to send from field :"email" the value: "Publisher@petemail.com"
+2017-12-12 22:57:09,120 INFO  [Project_CommonFunction] - Succeeded to send from field :"id_order" the value: "123456"
+2017-12-12 22:57:09,237 INFO  [Project_CommonFunction] - Clicked on the Element: "fileUpload" with success 
+2017-12-12 22:57:15,540 INFO  [Project_CommonFunction] - This Action succeed.
+2017-12-12 22:57:15,637 INFO  [Project_CommonFunction] - Succeeded to send from field :"message" the value: ""
+2017-12-12 22:57:16,935 INFO  [Project_CommonFunction] - Clicked on the Element: "submitMessage" with success 
+2017-12-12 22:57:19,935 INFO  [Base_Project] - ContactUs Form submitted!
+2017-12-12 22:57:20,028 INFO  [Project_CommonFunction] - The message that appear was :The message cannot be blank.
+2017-12-12 22:57:21,217 INFO  [Project_CommonFunction] -  Element selected with success 
+2017-12-12 22:57:21,383 INFO  [Project_CommonFunction] - Succeeded to send from field :"email" the value: "Publisher@petemail.com"
+2017-12-12 22:57:21,495 INFO  [Project_CommonFunction] - Succeeded to send from field :"id_order" the value: "123456"
+2017-12-12 22:57:21,607 INFO  [Project_CommonFunction] - Clicked on the Element: "fileUpload" with success 
+2017-12-12 22:57:27,912 INFO  [Project_CommonFunction] - This Action succeed.
+2017-12-12 22:57:28,072 INFO  [Project_CommonFunction] - Succeeded to send from field :"message" the value: "This is a test"
+2017-12-12 22:57:30,325 INFO  [Project_CommonFunction] - Clicked on the Element: "submitMessage" with success 
+2017-12-12 22:57:33,326 INFO  [Base_Project] - ContactUs Form submitted!
+2017-12-12 22:57:33,411 INFO  [Project_CommonFunction] - The message that appear was :Your message has been successfully sent to our team.
+2017-12-12 22:57:35,801 INFO  [Project_CommonFunction] - Clicked on the Element: "" with success 
+2017-12-12 22:57:35,801 INFO  [Base_Project] - End of Test!!!
+2017-12-12 22:57:35,801 INFO  [Base_Project] - Verify:Search and Shopping cart- Start test #4
+2017-12-12 22:57:35,929 INFO  [Project_CommonFunction] - Succeeded to send from field :"Search" the value: "Blouse"
+2017-12-12 22:57:37,515 INFO  [Project_CommonFunction] - Clicked on the Element: "Cart (empty)" with success 
+2017-12-12 22:57:39,109 INFO  [Project_CommonFunction] - The message that appear was :1 result has been found.
+2017-12-12 22:57:39,517 INFO  [Project_CommonFunction] - Clicked on the Element: "Add to cart" with success 
+2017-12-12 22:57:41,078 INFO  [Project_CommonFunction] - The Element There is 1 item in your cart. is displayed on page!!
+2017-12-12 22:57:41,108 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-12-12 22:57:41,155 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-12-12 22:57:41,681 ERROR [Project_CommonFunction] - Something went wrong while trying to Assert the two values: $7.00 and second one is: $7.01
+2017-12-12 22:57:42,118 ERROR [Project_CommonFunction] - Something went wrong while trying to Assert the two values: $31.00 and second one is: $31.010
+2017-12-12 22:57:42,164 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-12-12 22:57:42,165 INFO  [Base_Project] - The Elements are displayed on page!!
+2017-12-12 22:57:42,211 INFO  [Project_CommonFunction] - The element , succeeded to loaded!!!
+2017-12-12 22:57:42,314 INFO  [Project_CommonFunction] - Clicked on the Element: "Close window" with success 
+2017-12-12 22:57:42,369 INFO  [Base_Project] - The Element: Cart 1 Product appear  !!
+2017-12-12 22:57:42,369 INFO  [Base_Project] - End of Test!!!
+2017-12-13 23:35:45,032 INFO  [Base_Project] - Open brwoser :Chrome
+2017-12-13 23:35:58,522 INFO  [Base_Project] - Verify:Search and Shopping cart- Start test #4
+2017-12-13 23:35:58,748 INFO  [Project_CommonFunction] - Succeeded to send from field :"Search" the value: "Blouse"
+2017-12-13 23:36:01,901 INFO  [Project_CommonFunction] - Clicked on the Element: "Cart (empty)" with success 
+2017-12-13 23:36:03,493 INFO  [Project_CommonFunction] - The message that appear was :1 result has been found.
+2017-12-13 23:36:03,920 INFO  [Project_CommonFunction] - Clicked on the Element: "Add to cart" with success 
+2017-12-13 23:36:05,485 INFO  [Project_CommonFunction] - The Element There is 1 item in your cart. is displayed on page!!
+2017-12-13 23:36:05,507 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-12-13 23:36:05,556 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-12-13 23:36:06,106 ERROR [Project_CommonFunction] - Something went wrong while trying to Assert the two values: $7.00 and second one is: $7.01
+2017-12-13 23:36:06,556 ERROR [Project_CommonFunction] - Something went wrong while trying to Assert the two values: $31.00 and second one is: $31.010
+2017-12-13 23:36:06,608 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-12-13 23:36:06,609 INFO  [Base_Project] - The Elements are displayed on page!!
+2017-12-13 23:36:06,657 INFO  [Project_CommonFunction] - The element , succeeded to loaded!!!
+2017-12-13 23:36:06,744 INFO  [Project_CommonFunction] - Clicked on the Element: "Close window" with success 
+2017-12-13 23:36:06,800 INFO  [Base_Project] - The Element: Cart 1 Product appear  !!
+2017-12-13 23:36:06,801 INFO  [Base_Project] - End of Test!!!
+2017-12-13 23:37:21,329 INFO  [Base_Project] - Open brwoser :Chrome
+2017-12-13 23:37:30,389 INFO  [Base_Project] - Store locator - Start test #1
+2017-12-13 23:37:34,163 INFO  [Project_CommonFunction] - Clicked on the Element: "Our stores" with success 
+2017-12-13 23:37:34,306 INFO  [Project_CommonFunction] - The Element Map data ©2017 Google, INEGI
+Terms of Use
+Map is displayed on page!!
+2017-12-13 23:37:35,624 INFO  [Project_CommonFunction] - The image StoreToPNG.png exist!!
+2017-12-13 23:37:37,077 INFO  [Project_CommonFunction] - Clicked on Image:  StoreToPNG.png !!
+2017-12-13 23:37:40,503 ERROR [Project_CommonFunction] - The image : StoreDirectionsMiami.png doesn't exsit on page : External_Files//Sikuli_Images//StoreDirectionsMiami.png: (152x33) in S(0)[0,0 1920x1200] E:Y, T:3.0
+2017-12-13 23:37:41,002 INFO  [Base_Project] - End of Test!!!
+2017-12-13 23:37:41,032 INFO  [Base_Project] - Sign in - Start test #2
+2017-12-13 23:37:42,887 INFO  [Project_CommonFunction] - Clicked on the Element: "Sign in" with success 
+2017-12-13 23:37:43,042 INFO  [Project_CommonFunction] - succeed to read from Excel 
+2017-12-13 23:37:43,341 INFO  [Project_CommonFunction] - Succeeded to send from field :"email" the value: "publisherpete4@gmail.com"
+2017-12-13 23:37:43,478 INFO  [Project_CommonFunction] - Succeeded to send from field :"passwd" the value: "qwerty321"
+2017-12-13 23:37:45,632 INFO  [Project_CommonFunction] - The message that appear was :Welcome to your account. Here you can manage all of your personal information and orders.
+2017-12-13 23:37:45,632 INFO  [Base_Project] - Cradiantial publisherpete4@gmail.com, and Password: qwerty321were OK
+2017-12-13 23:37:47,170 INFO  [Base_Project] - Clicked on signout
+2017-12-13 23:37:47,355 INFO  [Project_CommonFunction] - Succeeded to send from field :"email" the value: "publisherpete@gmail.com"
+2017-12-13 23:37:47,462 INFO  [Project_CommonFunction] - Succeeded to send from field :"passwd" the value: "123456"
+2017-12-13 23:37:48,500 INFO  [Project_CommonFunction] - The message that appear was :Authentication failed.
+2017-12-13 23:37:48,500 INFO  [Base_Project] - Cradiantial publisherpete@gmail.com, and Password: 123456were OK - Which FAILED to login
+2017-12-13 23:37:49,745 INFO  [Project_CommonFunction] - Clicked on the Element: "Log in to your customer account" with success 
+2017-12-13 23:37:49,745 INFO  [Base_Project] - End of Test!!!
+2017-12-13 23:37:49,746 INFO  [Base_Project] - Send Contact Us Form - Start test #3
+2017-12-13 23:37:50,988 INFO  [Project_CommonFunction] - Clicked on the Element: "Contact us" with success 
+2017-12-13 23:37:51,031 INFO  [Project_CommonFunction] - succeed to read from Excel 
+2017-12-13 23:37:51,282 INFO  [Project_CommonFunction] -  Element selected with success 
+2017-12-13 23:37:51,464 INFO  [Project_CommonFunction] - Succeeded to send from field :"email" the value: "Publisherpetemail.com"
+2017-12-13 23:37:51,592 INFO  [Project_CommonFunction] - Succeeded to send from field :"id_order" the value: "123456"
+2017-12-13 23:37:51,722 INFO  [Project_CommonFunction] - Clicked on the Element: "fileUpload" with success 
+2017-12-13 23:37:58,689 INFO  [Project_CommonFunction] - This Action succeed.
+2017-12-13 23:37:58,843 INFO  [Project_CommonFunction] - Succeeded to send from field :"message" the value: "This is a test"
+2017-12-13 23:37:59,813 INFO  [Project_CommonFunction] - Clicked on the Element: "submitMessage" with success 
+2017-12-13 23:38:02,813 INFO  [Base_Project] - ContactUs Form submitted!
+2017-12-13 23:38:02,918 INFO  [Project_CommonFunction] - The message that appear was :Invalid email address.
+2017-12-13 23:38:04,250 INFO  [Project_CommonFunction] -  Element selected with success 
+2017-12-13 23:38:04,421 INFO  [Project_CommonFunction] - Succeeded to send from field :"email" the value: "Publisher@petemail.com"
+2017-12-13 23:38:04,538 INFO  [Project_CommonFunction] - Succeeded to send from field :"id_order" the value: "123456"
+2017-12-13 23:38:04,655 INFO  [Project_CommonFunction] - Clicked on the Element: "fileUpload" with success 
+2017-12-13 23:38:10,956 INFO  [Project_CommonFunction] - This Action succeed.
+2017-12-13 23:38:11,054 INFO  [Project_CommonFunction] - Succeeded to send from field :"message" the value: ""
+2017-12-13 23:38:12,287 INFO  [Project_CommonFunction] - Clicked on the Element: "submitMessage" with success 
+2017-12-13 23:38:15,287 INFO  [Base_Project] - ContactUs Form submitted!
+2017-12-13 23:38:15,379 INFO  [Project_CommonFunction] - The message that appear was :The message cannot be blank.
+2017-12-13 23:38:16,457 INFO  [Project_CommonFunction] -  Element selected with success 
+2017-12-13 23:38:16,689 INFO  [Project_CommonFunction] - Succeeded to send from field :"email" the value: "Publisher@petemail.com"
+2017-12-13 23:38:16,806 INFO  [Project_CommonFunction] - Succeeded to send from field :"id_order" the value: "123456"
+2017-12-13 23:38:16,921 INFO  [Project_CommonFunction] - Clicked on the Element: "fileUpload" with success 
+2017-12-13 23:38:23,224 INFO  [Project_CommonFunction] - This Action succeed.
+2017-12-13 23:38:23,386 INFO  [Project_CommonFunction] - Succeeded to send from field :"message" the value: "This is a test"
+2017-12-13 23:38:29,169 INFO  [Project_CommonFunction] - Clicked on the Element: "submitMessage" with success 
+2017-12-13 23:38:32,169 INFO  [Base_Project] - ContactUs Form submitted!
+2017-12-13 23:38:32,274 INFO  [Project_CommonFunction] - The message that appear was :Your message has been successfully sent to our team.
+2017-12-13 23:38:34,955 INFO  [Project_CommonFunction] - Clicked on the Element: "" with success 
+2017-12-13 23:38:34,955 INFO  [Base_Project] - End of Test!!!
+2017-12-13 23:38:34,956 INFO  [Base_Project] - Verify:Search and Shopping cart- Start test #4
+2017-12-13 23:38:35,083 INFO  [Project_CommonFunction] - Succeeded to send from field :"Search" the value: "Blouse"
+2017-12-13 23:38:36,420 INFO  [Project_CommonFunction] - Clicked on the Element: "Cart (empty)" with success 
+2017-12-13 23:38:38,015 INFO  [Project_CommonFunction] - The message that appear was :1 result has been found.
+2017-12-13 23:38:38,420 INFO  [Project_CommonFunction] - Clicked on the Element: "Add to cart" with success 
+2017-12-13 23:38:40,007 INFO  [Project_CommonFunction] - The Element There is 1 item in your cart. is displayed on page!!
+2017-12-13 23:38:40,025 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-12-13 23:38:40,072 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-12-13 23:38:40,554 ERROR [Project_CommonFunction] - Something went wrong while trying to Assert the two values: $7.00 and second one is: $7.01
+2017-12-13 23:38:41,002 ERROR [Project_CommonFunction] - Something went wrong while trying to Assert the two values: $31.00 and second one is: $31.010
+2017-12-13 23:38:41,048 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-12-13 23:38:41,048 INFO  [Base_Project] - The Elements are displayed on page!!
+2017-12-13 23:38:41,092 INFO  [Project_CommonFunction] - The element , succeeded to loaded!!!
+2017-12-13 23:38:41,175 INFO  [Project_CommonFunction] - Clicked on the Element: "Close window" with success 
+2017-12-13 23:38:41,227 INFO  [Base_Project] - The Element: Cart 1 Product appear  !!
+2017-12-13 23:38:41,227 INFO  [Base_Project] - End of Test!!!
+2017-12-13 23:45:08,702 INFO  [Base_Project] - Open brwoser :Chrome
+2017-12-13 23:45:18,414 INFO  [Base_Project] - Store locator - Start test #1
+2017-12-13 23:45:21,437 INFO  [Project_CommonFunction] - Clicked on the Element: "Our stores" with success 
+2017-12-13 23:45:21,580 INFO  [Project_CommonFunction] - The Element Map data ©2017 Google, INEGI
+Terms of Use
+Map is displayed on page!!
+2017-12-13 23:45:22,563 INFO  [Project_CommonFunction] - The image StoreToPNG.png exist!!
+2017-12-13 23:45:23,984 INFO  [Project_CommonFunction] - Clicked on Image:  StoreToPNG.png !!
+2017-12-13 23:45:24,882 INFO  [Project_CommonFunction] - The image StoreDirectionsMiami.png exist!!
+2017-12-13 23:45:25,722 INFO  [Project_CommonFunction] - The image ClosePopup.png exist!!
+2017-12-13 23:45:27,097 INFO  [Project_CommonFunction] - Clicked on Image:  ClosePopup.png !!
+2017-12-13 23:45:27,097 INFO  [Base_Project] - End of Test!!!
+2017-12-17 22:48:42,397 INFO  [BaseFunction] - Open brwoser :Chrome
+2017-12-17 22:49:11,896 INFO  [BaseFunction] - Store locator - Start test #1
+2017-12-17 22:49:16,116 INFO  [CommonFunction] - Clicked on the Element: "Our stores" with success 
+2017-12-17 22:49:16,254 INFO  [CommonFunction] - The Element Map data ©2017 Google, INEGI
+Terms of Use
+Map is displayed on page!!
+2017-12-17 22:49:18,028 INFO  [CommonFunction] - The image StoreToPNG.png exist!!
+2017-12-17 22:49:19,459 INFO  [CommonFunction] - Clicked on Image: StoreToPNG.png!!
+2017-12-17 22:49:20,315 INFO  [CommonFunction] - The image StoreDirectionsMiami.png exist!!
+2017-12-17 22:49:21,195 INFO  [CommonFunction] - The image ClosePopup.png exist!!
+2017-12-17 22:49:22,566 INFO  [CommonFunction] - Clicked on Image: ClosePopup.png!!
+2017-12-17 22:49:22,566 INFO  [BaseFunction] - End of Test!!!
+2017-12-17 22:49:22,571 INFO  [BaseFunction] - Sign in - Start test #2
+2017-12-17 22:49:24,817 INFO  [CommonFunction] - Clicked on the Element: "Sign in" with success 
+2017-12-17 22:49:24,993 INFO  [CommonFunction] - succeed to read from Excel 
+2017-12-17 22:49:25,219 INFO  [CommonFunction] - Succeeded to send from field :"email" the value: "publisherpete4@gmail.com"
+2017-12-17 22:49:25,336 INFO  [CommonFunction] - Succeeded to send from field :"passwd" the value: "qwerty321"
+2017-12-17 22:49:28,838 INFO  [CommonFunction] - The message that appear was :Welcome to your account. Here you can manage all of your personal information and orders.
+2017-12-17 22:49:28,839 INFO  [BaseFunction] - Cradiantial publisherpete4@gmail.com, and Password: qwerty321were OK
+2017-12-17 22:49:31,045 INFO  [BaseFunction] - Clicked on signout
+2017-12-17 22:49:31,214 INFO  [CommonFunction] - Succeeded to send from field :"email" the value: "publisherpete@gmail.com"
+2017-12-17 22:49:31,309 INFO  [CommonFunction] - Succeeded to send from field :"passwd" the value: "123456"
+2017-12-17 22:49:32,570 INFO  [CommonFunction] - The message that appear was :Authentication failed.
+2017-12-17 22:49:32,571 INFO  [BaseFunction] - Cradiantial publisherpete@gmail.com, and Password: 123456were OK - Which FAILED to login
+2017-12-17 22:49:34,124 INFO  [CommonFunction] - Clicked on the Element: "Log in to your customer account" with success 
+2017-12-17 22:49:34,125 INFO  [BaseFunction] - End of Test!!!
+2017-12-17 22:49:34,125 INFO  [BaseFunction] - Send Contact Us Form - Start test #3
+2017-12-17 22:49:35,520 INFO  [CommonFunction] - Clicked on the Element: "Contact us" with success 
+2017-12-17 22:49:35,569 INFO  [CommonFunction] - succeed to read from Excel 
+2017-12-17 22:49:35,762 INFO  [CommonFunction] -  Element selected with success 
+2017-12-17 22:49:35,910 INFO  [CommonFunction] - Succeeded to send from field :"email" the value: "Publisherpetemail.com"
+2017-12-17 22:49:36,006 INFO  [CommonFunction] - Succeeded to send from field :"id_order" the value: "123456"
+2017-12-17 22:49:36,111 INFO  [CommonFunction] - Clicked on the Element: "fileUpload" with success 
+2017-12-17 22:49:43,055 INFO  [CommonFunction] - This Action succeed.
+2017-12-17 22:49:43,192 INFO  [CommonFunction] - Succeeded to send from field :"message" the value: "This is a test"
+2017-12-17 22:49:44,642 INFO  [CommonFunction] - Clicked on the Element: "submitMessage" with success 
+2017-12-17 22:49:47,644 INFO  [BaseFunction] - ContactUs Form submitted!
+2017-12-17 22:49:47,737 INFO  [CommonFunction] - The message that appear was :Invalid email address.
+2017-12-17 22:49:49,019 INFO  [CommonFunction] -  Element selected with success 
+2017-12-17 22:49:49,170 INFO  [CommonFunction] - Succeeded to send from field :"email" the value: "Publisher@petemail.com"
+2017-12-17 22:49:49,266 INFO  [CommonFunction] - Succeeded to send from field :"id_order" the value: "123456"
+2017-12-17 22:49:49,363 INFO  [CommonFunction] - Clicked on the Element: "fileUpload" with success 
+2017-12-17 22:49:55,665 INFO  [CommonFunction] - This Action succeed.
+2017-12-17 22:49:55,749 INFO  [CommonFunction] - Succeeded to send from field :"message" the value: ""
+2017-12-17 22:49:57,182 INFO  [CommonFunction] - Clicked on the Element: "submitMessage" with success 
+2017-12-17 22:50:00,183 INFO  [BaseFunction] - ContactUs Form submitted!
+2017-12-17 22:50:00,248 INFO  [CommonFunction] - The message that appear was :The message cannot be blank.
+2017-12-17 22:50:01,437 INFO  [CommonFunction] -  Element selected with success 
+2017-12-17 22:50:01,564 INFO  [CommonFunction] - Succeeded to send from field :"email" the value: "Publisher@petemail.com"
+2017-12-17 22:50:01,656 INFO  [CommonFunction] - Succeeded to send from field :"id_order" the value: "123456"
+2017-12-17 22:50:01,750 INFO  [CommonFunction] - Clicked on the Element: "fileUpload" with success 
+2017-12-17 22:50:08,055 INFO  [CommonFunction] - This Action succeed.
+2017-12-17 22:50:08,187 INFO  [CommonFunction] - Succeeded to send from field :"message" the value: "This is a test"
+2017-12-17 22:50:10,942 INFO  [CommonFunction] - Clicked on the Element: "submitMessage" with success 
+2017-12-17 22:50:13,943 INFO  [BaseFunction] - ContactUs Form submitted!
+2017-12-17 22:50:14,000 INFO  [CommonFunction] - The message that appear was :Your message has been successfully sent to our team.
+2017-12-17 22:50:17,715 INFO  [CommonFunction] - Clicked on the Element: "" with success 
+2017-12-17 22:50:17,715 INFO  [BaseFunction] - End of Test!!!
+2017-12-17 22:50:17,716 INFO  [BaseFunction] - Verify:Search and Shopping cart- Start test #4
+2017-12-17 22:50:17,809 INFO  [CommonFunction] - Succeeded to send from field :"Search" the value: "Blouse"
+2017-12-17 22:50:20,335 INFO  [CommonFunction] - Clicked on the Element: "Cart (empty)" with success 
+2017-12-17 22:50:21,908 INFO  [CommonFunction] - The message that appear was:1 result has been found.
+2017-12-17 22:50:22,268 INFO  [CommonFunction] - Clicked on the Element: "Add to cart" with success 
+2017-12-17 22:50:23,815 INFO  [CommonFunction] - The Element There is 1 item in your cart. is displayed on page!!
+2017-12-17 22:50:23,836 INFO  [CommonFunction] - Assertion  was succed 
+2017-12-17 22:50:23,870 INFO  [CommonFunction] - Assertion  was succed 
+2017-12-17 22:50:24,733 ERROR [CommonFunction] - Something went wrong while trying to Assert the two values: $7.00 and second one is: $7.01
+2017-12-17 22:50:25,183 ERROR [CommonFunction] - Something went wrong while trying to Assert the two values: $31.00 and second one is: $31.010
+2017-12-17 22:50:25,216 INFO  [CommonFunction] - Assertion  was succed 
+2017-12-17 22:50:25,216 INFO  [BaseFunction] - The Elements are displayed on page!!
+2017-12-17 22:50:25,249 INFO  [CommonFunction] - The element , succeeded to loaded!!!
+2017-12-17 22:50:25,320 INFO  [CommonFunction] - Clicked on the Element: "Close window" with success 
+2017-12-17 22:50:25,370 INFO  [BaseFunction] - The Element: Cart 1 Product appear  !!
+2017-12-17 22:50:25,370 INFO  [BaseFunction] - End of Test!!!
+2017-12-17 23:10:48,280 INFO  [BaseFunction] - Open brwoser :Chrome
+2017-12-17 23:11:00,770 INFO  [BaseFunction] - Store locator - Start test #1
+2017-12-17 23:11:04,327 INFO  [CommonFunction] - Clicked on the Element: "Our stores" with success 
+2017-12-17 23:11:04,462 INFO  [CommonFunction] - The Element Map data ©2017 Google, INEGI
+Terms of Use
+Map is displayed on page!!
+2017-12-17 23:11:05,509 INFO  [CommonFunction] - The image StoreToPNG.png exist!!
+2017-12-17 23:11:06,914 INFO  [CommonFunction] - Clicked on Image: StoreToPNG.png!!
+2017-12-17 23:11:07,758 INFO  [CommonFunction] - The image StoreDirectionsMiami.png exist!!
+2017-12-17 23:11:08,607 INFO  [CommonFunction] - The image ClosePopup.png exist!!
+2017-12-17 23:11:10,002 INFO  [CommonFunction] - Clicked on Image: ClosePopup.png!!
+2017-12-17 23:11:10,002 INFO  [BaseFunction] - End of Test!!!
+2017-12-17 23:11:10,006 INFO  [BaseFunction] - Sign in - Start test #2
+2017-12-17 23:11:12,047 INFO  [CommonFunction] - Clicked on the Element: "Sign in" with success 
+2017-12-17 23:11:12,193 INFO  [CommonFunction] - succeed to read from Excel 
+2017-12-17 23:11:12,413 INFO  [CommonFunction] - Succeeded to send from field :"email" the value: "publisherpete4@gmail.com"
+2017-12-17 23:11:12,527 INFO  [CommonFunction] - Succeeded to send from field :"passwd" the value: "qwerty321"
+2017-12-17 23:11:14,628 INFO  [CommonFunction] - The message that appear was :Welcome to your account. Here you can manage all of your personal information and orders.
+2017-12-17 23:11:14,629 INFO  [BaseFunction] - Cradiantial publisherpete4@gmail.com, and Password: qwerty321were OK
+2017-12-17 23:11:16,709 INFO  [BaseFunction] - Clicked on signout
+2017-12-17 23:11:16,862 INFO  [CommonFunction] - Succeeded to send from field :"email" the value: "publisherpete@gmail.com"
+2017-12-17 23:11:16,953 INFO  [CommonFunction] - Succeeded to send from field :"passwd" the value: "123456"
+2017-12-17 23:11:18,264 INFO  [CommonFunction] - The message that appear was :Authentication failed.
+2017-12-17 23:11:18,264 INFO  [BaseFunction] - Cradiantial publisherpete@gmail.com, and Password: 123456were OK - Which FAILED to login
+2017-12-17 23:11:19,805 INFO  [CommonFunction] - Clicked on the Element: "Log in to your customer account" with success 
+2017-12-17 23:11:19,805 INFO  [BaseFunction] - End of Test!!!
+2017-12-17 23:11:19,806 INFO  [BaseFunction] - Send Contact Us Form - Start test #3
+2017-12-17 23:11:21,212 INFO  [CommonFunction] - Clicked on the Element: "Contact us" with success 
+2017-12-17 23:11:21,256 INFO  [CommonFunction] - succeed to read from Excel 
+2017-12-17 23:11:21,457 INFO  [CommonFunction] -  Element selected with success 
+2017-12-17 23:11:21,603 INFO  [CommonFunction] - Succeeded to send from field :"email" the value: "Publisherpetemail.com"
+2017-12-17 23:11:21,705 INFO  [CommonFunction] - Succeeded to send from field :"id_order" the value: "123456"
+2017-12-17 23:11:21,833 INFO  [CommonFunction] - Clicked on the Element: "fileUpload" with success 
+2017-12-17 23:11:28,170 INFO  [CommonFunction] - This Action succeed.
+2017-12-17 23:11:28,322 INFO  [CommonFunction] - Succeeded to send from field :"message" the value: "This is a test"
+2017-12-17 23:11:29,753 INFO  [CommonFunction] - Clicked on the Element: "submitMessage" with success 
+2017-12-17 23:11:29,753 INFO  [BaseFunction] - ContactUs Form submitted!
+2017-12-17 23:11:29,824 INFO  [CommonFunction] - The message that appear was :Invalid email address.
+2017-12-17 23:11:30,866 INFO  [CommonFunction] -  Element selected with success 
+2017-12-17 23:11:31,008 INFO  [CommonFunction] - Succeeded to send from field :"email" the value: "Publisher@petemail.com"
+2017-12-17 23:11:31,098 INFO  [CommonFunction] - Succeeded to send from field :"id_order" the value: "123456"
+2017-12-17 23:11:31,202 INFO  [CommonFunction] - Clicked on the Element: "fileUpload" with success 
+2017-12-17 23:11:37,505 INFO  [CommonFunction] - This Action succeed.
+2017-12-17 23:11:37,598 INFO  [CommonFunction] - Succeeded to send from field :"message" the value: ""
+2017-12-17 23:11:38,895 INFO  [CommonFunction] - Clicked on the Element: "submitMessage" with success 
+2017-12-17 23:11:38,895 INFO  [BaseFunction] - ContactUs Form submitted!
+2017-12-17 23:11:38,965 INFO  [CommonFunction] - The message that appear was :The message cannot be blank.
+2017-12-17 23:11:40,146 INFO  [CommonFunction] -  Element selected with success 
+2017-12-17 23:11:40,278 INFO  [CommonFunction] - Succeeded to send from field :"email" the value: "Publisher@petemail.com"
+2017-12-17 23:11:40,360 INFO  [CommonFunction] - Succeeded to send from field :"id_order" the value: "123456"
+2017-12-17 23:11:40,455 INFO  [CommonFunction] - Clicked on the Element: "fileUpload" with success 
+2017-12-17 23:11:46,758 INFO  [CommonFunction] - This Action succeed.
+2017-12-17 23:11:46,892 INFO  [CommonFunction] - Succeeded to send from field :"message" the value: "This is a test"
+2017-12-17 23:11:49,175 INFO  [CommonFunction] - Clicked on the Element: "submitMessage" with success 
+2017-12-17 23:11:49,175 INFO  [BaseFunction] - ContactUs Form submitted!
+2017-12-17 23:11:49,242 INFO  [CommonFunction] - The message that appear was :Your message has been successfully sent to our team.
+2017-12-17 23:11:51,995 INFO  [CommonFunction] - Clicked on the Element: "" with success 
+2017-12-17 23:11:51,995 INFO  [BaseFunction] - End of Test!!!
+2017-12-17 23:11:51,995 INFO  [BaseFunction] - Verify:Search and Shopping cart- Start test #4
+2017-12-17 23:11:52,087 INFO  [CommonFunction] - Succeeded to send from field :"Search" the value: "Blouse"
+2017-12-17 23:11:53,692 INFO  [CommonFunction] - Clicked on the Element: "Cart (empty)" with success 
+2017-12-17 23:11:55,266 INFO  [CommonFunction] - The message that appear was:1 result has been found.
+2017-12-17 23:11:55,620 INFO  [CommonFunction] - Clicked on the Element: "Add to cart" with success 
+2017-12-17 23:11:57,182 INFO  [CommonFunction] - The Element There is 1 item in your cart. is displayed on page!!
+2017-12-17 23:11:57,206 INFO  [CommonFunction] - Assertion  was succed 
+2017-12-17 23:11:57,247 INFO  [CommonFunction] - Assertion  was succed 
+2017-12-17 23:11:57,756 ERROR [CommonFunction] - Something went wrong while trying to Assert the two values: $7.00 and second one is: $7.01
+2017-12-17 23:11:58,197 ERROR [CommonFunction] - Something went wrong while trying to Assert the two values: $31.00 and second one is: $31.010
+2017-12-17 23:11:58,233 INFO  [CommonFunction] - Assertion  was succed 
+2017-12-17 23:11:58,233 INFO  [BaseFunction] - The Elements are displayed on page!!
+2017-12-17 23:11:58,266 INFO  [CommonFunction] - The element , succeeded to loaded!!!
+2017-12-17 23:11:58,341 INFO  [CommonFunction] - Clicked on the Element: "Close window" with success 
+2017-12-17 23:11:58,387 INFO  [BaseFunction] - The Element: Cart 1 Product appear  !!
+2017-12-17 23:11:58,387 INFO  [BaseFunction] - End of Test!!!
+2017-12-17 23:15:13,805 INFO  [BaseFunction] - Open brwoser :Chrome
+2017-12-17 23:15:24,179 INFO  [BaseFunction] - Store locator - Start test #1
+2017-12-17 23:15:27,081 INFO  [CommonFunction] - Clicked on the Element: "Our stores" with success 
+2017-12-17 23:15:27,222 INFO  [CommonFunction] - The Element Map data ©2017 Google, INEGI
+Terms of Use
+Map is displayed on page!!
+2017-12-17 23:15:28,277 INFO  [CommonFunction] - The image StoreToPNG.png exist!!
+2017-12-17 23:15:29,682 INFO  [CommonFunction] - Clicked on Image: StoreToPNG.png!!
+2017-12-17 23:15:30,543 INFO  [CommonFunction] - The image StoreDirectionsMiami.png exist!!
+2017-12-17 23:15:31,415 INFO  [CommonFunction] - The image ClosePopup.png exist!!
+2017-12-17 23:15:32,786 INFO  [CommonFunction] - Clicked on Image: ClosePopup.png!!
+2017-12-17 23:15:32,786 INFO  [BaseFunction] - End of Test!!!
+2017-12-17 23:15:32,792 INFO  [BaseFunction] - Send Contact Us Form - Start test #3
+2017-12-17 23:15:34,561 INFO  [CommonFunction] - Clicked on the Element: "Contact us" with success 
+2017-12-17 23:15:34,638 INFO  [CommonFunction] - succeed to read from Excel 
+2017-12-17 23:15:34,896 INFO  [CommonFunction] -  Element selected with success 
+2017-12-17 23:15:35,041 INFO  [CommonFunction] - Succeeded to send from field :"email" the value: "Publisherpetemail.com"
+2017-12-17 23:15:35,148 INFO  [CommonFunction] - Succeeded to send from field :"id_order" the value: "123456"
+2017-12-17 23:15:35,239 INFO  [CommonFunction] - Clicked on the Element: "fileUpload" with success 
+2017-12-17 23:15:41,582 INFO  [CommonFunction] - This Action succeed.
+2017-12-17 23:15:41,719 INFO  [CommonFunction] - Succeeded to send from field :"message" the value: "This is a test"
+2017-12-17 23:15:42,838 INFO  [CommonFunction] - Clicked on the Element: "submitMessage" with success 
+2017-12-17 23:15:42,838 INFO  [BaseFunction] - ContactUs Form submitted!
+2017-12-17 23:15:42,907 INFO  [CommonFunction] - The message that appear was :Invalid email address.
+2017-12-17 23:15:44,104 INFO  [CommonFunction] -  Element selected with success 
+2017-12-17 23:15:44,269 INFO  [CommonFunction] - Succeeded to send from field :"email" the value: "Publisher@petemail.com"
+2017-12-17 23:15:44,389 INFO  [CommonFunction] - Succeeded to send from field :"id_order" the value: "123456"
+2017-12-17 23:15:44,497 INFO  [CommonFunction] - Clicked on the Element: "fileUpload" with success 
+2017-12-17 23:15:50,801 INFO  [CommonFunction] - This Action succeed.
+2017-12-17 23:15:50,880 INFO  [CommonFunction] - Succeeded to send from field :"message" the value: ""
+2017-12-17 23:15:52,080 INFO  [CommonFunction] - Clicked on the Element: "submitMessage" with success 
+2017-12-17 23:15:52,081 INFO  [BaseFunction] - ContactUs Form submitted!
+2017-12-17 23:15:52,157 INFO  [CommonFunction] - The message that appear was :The message cannot be blank.
+2017-12-17 23:15:53,316 INFO  [CommonFunction] -  Element selected with success 
+2017-12-17 23:15:53,456 INFO  [CommonFunction] - Succeeded to send from field :"email" the value: "Publisher@petemail.com"
+2017-12-17 23:15:53,553 INFO  [CommonFunction] - Succeeded to send from field :"id_order" the value: "123456"
+2017-12-17 23:15:53,658 INFO  [CommonFunction] - Clicked on the Element: "fileUpload" with success 
+2017-12-17 23:15:59,960 INFO  [CommonFunction] - This Action succeed.
+2017-12-17 23:16:00,089 INFO  [CommonFunction] - Succeeded to send from field :"message" the value: "This is a test"
+2017-12-17 23:16:02,364 INFO  [CommonFunction] - Clicked on the Element: "submitMessage" with success 
+2017-12-17 23:16:02,364 INFO  [BaseFunction] - ContactUs Form submitted!
+2017-12-17 23:16:02,437 INFO  [CommonFunction] - The message that appear was :Your message has been successfully sent to our team.
+2017-12-17 23:16:05,380 INFO  [CommonFunction] - Clicked on the Element: "" with success 
+2017-12-17 23:16:05,380 INFO  [BaseFunction] - End of Test!!!
