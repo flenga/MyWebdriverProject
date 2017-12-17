@@ -1,51 +1,52 @@
-package Page_Object_Factory;
+package pageObjects;
 
 import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import Project_Utilities.Base_Project;
-import Project_Utilities.Project_CommonFunction;
+import Project_Utilities.BaseFunction;
+import Project_Utilities.CommonFunction;
 
-public class Registration_Factory extends Base_Project
+public class RegistrationPage extends BaseFunction
 {
-	Project_CommonFunction cf = new Project_CommonFunction();
+	CommonFunction cf = new CommonFunction();
 	public static WebDriver driver;
 	public String ValuToreport;
-	@FindBy(how = How.NAME, using= "id_gender")
+	@FindBy(how = How.NAME, using = "id_gender")
 	public List<WebElement> RadioButtonSex;
 	
-	@FindBy(how = How.ID, using= "customer_firstname")
+	@FindBy(how = How.ID, using = "customer_firstname")
 	public WebElement FirstName;
 	
-	@FindBy(how = How.ID, using= "customer_lastname")
+	@FindBy(how = How.ID, using = "customer_lastname")
 	public WebElement LastName;
 	
-	@FindBy(how = How.ID, using= "email")
+	@FindBy(how = How.ID, using = "email")
 	public WebElement Email;
 	
-	@FindBy(how = How.ID, using= "passwd")
+	@FindBy(how = How.ID, using = "passwd")
 	public WebElement Password;
-	@FindBy(how = How.NAME,using= "days")
+	
+	@FindBy(how = How.NAME,using = "days")
 	public WebElement Daysdropdown; 
 	
-	@FindBy(how = How.NAME,using= "months")
+	@FindBy(how = How.NAME,using = "months")
 	public WebElement Monthdropdown; 
 	
-	@FindBy(how = How.NAME,using= "years")
+	@FindBy(how = How.NAME,using = "years")
 	public WebElement Yeardropdown; 
 	
-	@FindBy(how = How.NAME,using= "submitAccount")
+	@FindBy(how = How.NAME,using = "submitAccount")
 	public WebElement RegisterButton; 
 	
 	//Error message
-	@FindBy(how = How.XPATH,using= "//*[@id='center_column']/div")
+	@FindBy(how = How.XPATH,using = "//*[@id='center_column']/div")
 	public WebElement ErrorMessage; 
 	
-	public Registration_Factory(WebDriver driver) 
+	public RegistrationPage(WebDriver driver) 
 	{
-		Registration_Factory.driver = driver;
+		RegistrationPage.driver = driver;
 	}
 	
 	public void FindElementsOnPage() throws Throwable

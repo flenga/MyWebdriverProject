@@ -6,28 +6,29 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 import org.openqa.selenium.support.PageFactory;
-import Page_Object_Factory.ContactUs_Factory;
-import Page_Object_Factory.Footer_Factory;
-import Page_Object_Factory.Header_Factory;
-import Page_Object_Factory.OurStores_Factory;
-import Page_Object_Factory.Registration_Factory;
-import Page_Object_Factory.SearchArea_Factory;
-import Page_Object_Factory.SearchToShopping_Factory;
-import Page_Object_Factory.Sign_In_Factory;
-import Project_Utilities.Base_Project;
+
+import Project_Utilities.BaseFunction;
+import pageObjects.ContactUsPage;
+import pageObjects.FooterAreaPage;
+import pageObjects.HeaderAreaPage;
+import pageObjects.OurStoresPage;
+import pageObjects.RegistrationPage;
+import pageObjects.SearchAreaPage;
+import pageObjects.SearchToShoppingCartPage;
+import pageObjects.SignInPage;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING) 
 
-public class Project_Run_Tests extends Base_Project
+public class ProjectRunTests extends BaseFunction
 {
-	static Sign_In_Factory fsf;
-	static Header_Factory Hef;
-	static Footer_Factory Fef;
-	static Registration_Factory Ref;
-	static ContactUs_Factory  Cuf;
-	static OurStores_Factory Osf;
-	static SearchArea_Factory Saf;
-	static SearchToShopping_Factory Ssc;
+	static SignInPage fsf;
+	static HeaderAreaPage Hef;
+	static FooterAreaPage Fef;
+	static RegistrationPage Ref;
+	static ContactUsPage  Cuf;
+	static OurStoresPage Osf;
+	static SearchAreaPage Saf;
+	static SearchToShoppingCartPage Ssc;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception 
@@ -35,14 +36,14 @@ public class Project_Run_Tests extends Base_Project
 		InitBrowser(getData("BrowserType"));
 		
 		InstanceReports();
-		fsf = PageFactory.initElements(driver, Sign_In_Factory.class);
-		Hef = PageFactory.initElements(driver, Header_Factory.class);
-		Fef = PageFactory.initElements(driver, Footer_Factory.class);
-		Ref = PageFactory.initElements(driver, Registration_Factory.class);
-		Cuf = PageFactory.initElements(driver, ContactUs_Factory.class);
-		Osf = PageFactory.initElements(driver, OurStores_Factory.class);
-		Saf = PageFactory.initElements(driver, SearchArea_Factory.class);
-		Ssc = PageFactory.initElements(driver, SearchToShopping_Factory.class);
+		fsf = PageFactory.initElements(driver, SignInPage.class);
+		Hef = PageFactory.initElements(driver, HeaderAreaPage.class);
+		Fef = PageFactory.initElements(driver, FooterAreaPage.class);
+		Ref = PageFactory.initElements(driver, RegistrationPage.class);
+		Cuf = PageFactory.initElements(driver, ContactUsPage.class);
+		Osf = PageFactory.initElements(driver, OurStoresPage.class);
+		Saf = PageFactory.initElements(driver, SearchAreaPage.class);
+		Ssc = PageFactory.initElements(driver, SearchToShoppingCartPage.class);
 	}
 	
 	/*
@@ -84,7 +85,7 @@ public class Project_Run_Tests extends Base_Project
 		initReportTest("Third test","Verify:Contact Us");
 		StartTest("Send Contact Us Form - Start test #3");
 		Hef.ClickOnContactUs();
-		Cuf.SendAmessage();
+		Cuf.SendContactFormAmessage();
 		Hef.ClickOnLogoSite();
 	}
 

@@ -1,56 +1,56 @@
-package Page_Object_Factory;
+package pageObjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import com.relevantcodes.extentreports.LogStatus;
-import Project_Utilities.Base_Project;
-import Project_Utilities.Project_CommonFunction;
-import Page_Object_Factory.Header_Factory;
+import Project_Utilities.BaseFunction;
+import Project_Utilities.CommonFunction;
+import pageObjects.HeaderAreaPage;
 
-public class ContactUs_Factory  extends Base_Project
+public class ContactUsPage  extends BaseFunction
 {
-	Project_CommonFunction cf= new Project_CommonFunction();
-	Header_Factory haa=new Header_Factory();
+	CommonFunction cf = new CommonFunction();
+	HeaderAreaPage haa = new HeaderAreaPage();
 	public String ValuToreport;
 	public WebDriver driver;
 
-	@FindBy(how = How.NAME,using= "id_contact")
+	@FindBy(how = How.NAME,using = "id_contact")
 	public WebElement SubjectDopdown; 
 
-	@FindBy(how = How.ID, using= "email")
+	@FindBy(how = How.ID, using = "email")
 	public WebElement email;
-	//In case user is sign in and has orders it become selection
-	@FindBy(how = How.ID, using= "id_order")
+	//In case user is signed in and has orders it becomes selected.
+	@FindBy(how = How.ID, using = "id_order")
 	public WebElement OrderRef;
-	//Upload file button fileUpload 
-	@FindBy(how = How.ID, using= "fileUpload")
+ 
+	@FindBy(how = How.ID, using = "fileUpload")
 	public WebElement fileUploadButton;
 
-	@FindBy(how = How.ID, using= "message")
+	@FindBy(how = How.ID, using = "message")
 	public WebElement message;
 
-	@FindBy(how = How.ID, using= "submitMessage")
+	@FindBy(how = How.ID, using = "submitMessage")
 	public WebElement SubmitMessage;
 
-	@FindBy(how = How.XPATH, using= " //*[@id='center_column']/div/ol/li") 
+	@FindBy(how = How.XPATH, using = " //*[@id='center_column']/div/ol/li") 
 	public WebElement ErrorDiv;
 
-	@FindBy(how = How.XPATH, using= "//*[@id='center_column']/p")
+	@FindBy(how = How.XPATH, using = "//*[@id='center_column']/p")
 	public WebElement SuccessDiv;
 
-	@FindBy(how = How.LINK_TEXT, using= "Contact us")
+	@FindBy(how = How.LINK_TEXT, using = "Contact us")
 	public WebElement ContactUs;
 
-	@FindBy(how = How.CSS, using= "span.filename")
+	@FindBy(how = How.CSS, using = "span.filename")
 	public WebElement Filename;
 
-	public ContactUs_Factory(WebDriver driver)
+	public ContactUsPage(WebDriver driver)
 	{
 		this.driver = driver;
 	}
 	
-	public void SendAmessage() throws Exception 
+	public void SendContactFormAmessage() throws Exception 
 	{
 		/*
 		 Reading from Excel file and get the data from this file, wrkbook.getSheet(0) 
@@ -79,7 +79,6 @@ public class ContactUs_Factory  extends Base_Project
 				cf.SendKeyAction(message,cf.wrkbook.getSheet(0).getCell(3,i).getContents(),ValuToreport);
 				ValuToreport=SubmitMessage.getAttribute("name");
 				cf.ClickOnElement(SubmitMessage,ValuToreport);
-				Thread.sleep(3000);
 				logger.info("ContactUs Form submitted!");
 				test.log(LogStatus.PASS, "ContactUs form submitted!");
 				/*
@@ -88,11 +87,11 @@ public class ContactUs_Factory  extends Base_Project
 				 */
 				if(ExpectedColor1.equals("red"))
 				{
-					cf.NoErrorMessageExsit(ErrorDiv, ExpectedColor1,ExpectedMessage1);
+					cf.NoErrorMessageExist(ErrorDiv, ExpectedColor1,ExpectedMessage1);
 				}	
 				else
 				{
-					cf.NoErrorMessageExsit(SuccessDiv, ExpectedColor1,ExpectedMessage1);
+					cf.NoErrorMessageExist(SuccessDiv, ExpectedColor1,ExpectedMessage1);
 				}
 				if(i<rowcount)
 				{
@@ -101,8 +100,8 @@ public class ContactUs_Factory  extends Base_Project
 			} 
 			catch (Exception e) 
 			{
-				logger.error("There was a problem while trying to send Contact us form see error : "+e.getMessage());
-				test.log(LogStatus.FAIL,"There was a problem while trying to send Contact us form see error : "+e.getMessage()+" "+test.addScreenCapture(getscreenshot()));
+				logger.error("There was a problem while trying to send Contact us form see error : " + e.getMessage());
+				test.log(LogStatus.FAIL,"There was a problem while trying to send Contact us form see error : "+ e.getMessage() +" "+ test.addScreenCapture(getscreenshot()));
 			}
 		}
 	}

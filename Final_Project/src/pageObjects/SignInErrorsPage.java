@@ -1,29 +1,29 @@
-package Page_Object_Factory;
+package pageObjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-import Project_Utilities.Base_Project;
-import Project_Utilities.Project_CommonFunction;
+import Project_Utilities.BaseFunction;
+import Project_Utilities.CommonFunction;
 
-public class Sign_in_Errors_Factory extends Base_Project
+public class SignInErrorsPage extends BaseFunction
 {
-	Project_CommonFunction comfunc = new Project_CommonFunction();
+	CommonFunction cf = new CommonFunction();
 	public WebDriver driver;
 	
-	@FindBy(how = How.XPATH, using= "//*[@id='center_column']/div[1]")
+	@FindBy(how = How.XPATH, using = "//*[@id='center_column']/div[1]")
 	public WebElement ErrorForSignIn;
 	
-	@FindBy(how = How.XPATH, using= "//*[@id='center_column']/div[1]/p")
+	@FindBy(how = How.XPATH, using = "//*[@id='center_column']/div[1]/p")
 	public WebElement ErrorForSignInTitle;
 	
-	@FindBy(how = How.XPATH, using= "//*[@id='center_column']/div[1]/ol/li")
+	@FindBy(how = How.XPATH, using = "//*[@id='center_column']/div[1]/ol/li")
 	public WebElement ErrorForSignInSpecific;
 	
-	@FindBy(how = How.XPATH, using= "//*[@id='create_account_error']/ol/li")
-	public WebElement ErrorForCreateAccount;//
+	@FindBy(how = How.XPATH, using = "//*[@id='create_account_error']/ol/li")
+	public WebElement ErrorForCreateAccount;
 
 	
 //	

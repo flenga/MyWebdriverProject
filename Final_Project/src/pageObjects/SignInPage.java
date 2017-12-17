@@ -1,48 +1,48 @@
-package Page_Object_Factory;
+package pageObjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import com.relevantcodes.extentreports.LogStatus;
-import Project_Utilities.Base_Project;
-import Project_Utilities.Project_CommonFunction;
+import Project_Utilities.BaseFunction;
+import Project_Utilities.CommonFunction;
 
-public class Sign_In_Factory  extends Base_Project
+public class SignInPage  extends BaseFunction
 {
 	
-	Project_CommonFunction cf = new Project_CommonFunction();
+	CommonFunction cf = new CommonFunction();
 	public String ValuToreport;
 	public WebDriver driver;
 	
-	@FindBy(how = How.LINK_TEXT, using= "Sign in")
+	@FindBy(how = How.LINK_TEXT, using = "Sign in")
 	public WebElement SignIn;
 	
-	@FindBy(how = How.LINK_TEXT, using= "Sign out")//After signin
+	@FindBy(how = How.LINK_TEXT, using = "Sign out")//After signin
 	public WebElement SignOut;
 	
-	@FindBy(how = How.ID, using= "email")
+	@FindBy(how = How.ID, using = "email")
 	public WebElement Emailaddress;
 		
-	@FindBy(how = How.ID, using= "passwd") 
+	@FindBy(how = How.ID, using = "passwd") 
 	public WebElement Password;
 
-	@FindBy(how = How.ID, using= "SubmitLogin")  
+	@FindBy(how = How.ID, using = "SubmitLogin")  
 	public WebElement SignInButton;
 
-	@FindBy(how = How.XPATH, using= "1//*[@id='center_column']/div[1]")
+	@FindBy(how = How.XPATH, using = "1//*[@id='center_column']/div[1]")
 	public WebElement ErrorForSignIn;
 
-	@FindBy(how = How.XPATH, using= "//*[@id='center_column']/div[1]/p")
+	@FindBy(how = How.XPATH, using = "//*[@id='center_column']/div[1]/p")
 	public WebElement ErrorForSignInTitle;
 
-	@FindBy(how = How.XPATH, using= "//*[@id='center_column']/div[1]/ol/li") 
+	@FindBy(how = How.XPATH, using = "//*[@id='center_column']/div[1]/ol/li") 
 	public WebElement ErrorForSignInSpecific;
 
-	@FindBy(how = How.XPATH, using= "//*[@id='center_column']/p") 
+	@FindBy(how = How.XPATH, using = "//*[@id='center_column']/p") 
 	public WebElement SuccessLogin;
 
 
-	public Sign_In_Factory(WebDriver driver) 
+	public SignInPage(WebDriver driver) 
 	{
 		this.driver = driver;
 
@@ -77,9 +77,9 @@ public class Sign_In_Factory  extends Base_Project
 				
 				if(ExpectedColor.equals("green"))
 				{
-					cf.NoErrorMessageExsit(SuccessLogin, ExpectedColor,ExpectedMessage1);
-					logger.info("Cradiantial "+ cf.wrkbook.getSheet(1).getCell(0,i).getContents()+", and Password: "+cf.wrkbook.getSheet(1).getCell(1,i).getContents()+"were OK");
-					test.log(LogStatus.PASS, "Cradiantial "+ cf.wrkbook.getSheet(1).getCell(0,i).getContents()+", and Password: "+cf.wrkbook.getSheet(1).getCell(1,i).getContents()+"were OK and user login to ");
+					cf.NoErrorMessageExist(SuccessLogin, ExpectedColor,ExpectedMessage1);
+					logger.info("Cradiantial "+ cf.wrkbook.getSheet(1).getCell(0,i).getContents() +", and Password: "+ cf.wrkbook.getSheet(1).getCell(1,i).getContents() +"were OK");
+					test.log(LogStatus.PASS, "Cradiantial "+ cf.wrkbook.getSheet(1).getCell(0,i).getContents()+", and Password: "+ cf.wrkbook.getSheet(1).getCell(1,i).getContents() +"were OK and user login to ");
 					
 					if(SignOut.isDisplayed())
 					{
@@ -89,17 +89,17 @@ public class Sign_In_Factory  extends Base_Project
 				}
 				else 										
 				{
-					cf.NoErrorMessageExsit(ErrorForSignInSpecific, ExpectedColor, ExpectedMessage1);
-					logger.info("Cradiantial "+ cf.wrkbook.getSheet(1).getCell(0,i).getContents()+", and Password: "+cf.wrkbook.getSheet(1).getCell(1,i).getContents()+"were OK - Which FAILED to login");
-					test.log(LogStatus.PASS, "Cradiantial "+ cf.wrkbook.getSheet(1).getCell(0,i).getContents()+", and Password: "+cf.wrkbook.getSheet(1).getCell(1,i).getContents()+"were OK - Which FAILED to login");
+					cf.NoErrorMessageExist(ErrorForSignInSpecific, ExpectedColor, ExpectedMessage1);
+					logger.info("Cradiantial "+ cf.wrkbook.getSheet(1).getCell(0,i).getContents() +", and Password: "+ cf.wrkbook.getSheet(1).getCell(1,i).getContents() +"were OK - Which FAILED to login");
+					test.log(LogStatus.PASS, "Cradiantial "+ cf.wrkbook.getSheet(1).getCell(0,i).getContents() +", and Password: "+ cf.wrkbook.getSheet(1).getCell(1,i).getContents() +"were OK - Which FAILED to login");
 					ValuToreport=SignIn.getAttribute("title");
 					cf.ClickOnElement(SignIn,ValuToreport);
 				}
 			} 
 			catch (Exception e) 
 			{
-				logger.error("There was a problem while trying to Sign in, see error : "+e.getMessage());
-				test.log(LogStatus.FAIL,"There was a problem while trying to Sign in, see error : "+e.getMessage()+" "+test.addScreenCapture(getscreenshot()));
+				logger.error("There was a problem while trying to Sign in, see error : "+ e.getMessage());
+				test.log(LogStatus.FAIL,"There was a problem while trying to Sign in, see error : "+ e.getMessage() +" "+ test.addScreenCapture(getscreenshot()));
 			}
 		}
 	}

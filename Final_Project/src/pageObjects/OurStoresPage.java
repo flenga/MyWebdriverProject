@@ -1,28 +1,28 @@
-package Page_Object_Factory;
+package pageObjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import Project_Utilities.Base_Project;
-import Project_Utilities.Project_CommonFunction;
+import Project_Utilities.BaseFunction;
+import Project_Utilities.CommonFunction;
 
-public class OurStores_Factory extends Base_Project
+public class OurStoresPage extends BaseFunction
 {
-	Project_CommonFunction cf = new Project_CommonFunction();
+	CommonFunction cf = new CommonFunction();
 	private String StoreImage;
 	private String StoreDirectionsMiami;
 	private String ClosePopup;
 	public String ValueSendToreport;
 	
-	@FindBy(how = How.LINK_TEXT, using= "Our stores")
+	@FindBy(how = How.LINK_TEXT, using = "Our stores")
 	public WebElement StoreLink;
 	
-	@FindBy(how = How.XPATH,using="//*[@id='map']/div/div")
+	@FindBy(how = How.XPATH,using = "//*[@id='map']/div/div")
 	public WebElement MapDiv;
 	
-	public OurStores_Factory (WebDriver driver) 
+	public OurStoresPage (WebDriver driver) 
 	{
-		Base_Project.driver = driver;
+		BaseFunction.driver = driver;
 	}
 	/*
 	 * This function check the functionality of the store map clicking on one of the stores verify that 
@@ -38,15 +38,15 @@ public class OurStores_Factory extends Base_Project
 		 */
 		if(WhichBrowserType.equals("IE"))
 		{
-			 StoreImage="StoreToPNG_IE.png";
-			 StoreDirectionsMiami="StoreDirectionsMiami_IE.png";
-			 ClosePopup="ClosePopup_IE.png";
+			 StoreImage = "StoreToPNG_IE.png";
+			 StoreDirectionsMiami  ="StoreDirectionsMiami_IE.png";
+			 ClosePopup = "ClosePopup_IE.png";
 		}
 		else
 		{
-			 StoreImage="StoreToPNG.png";
-			 StoreDirectionsMiami="StoreDirectionsMiami.png";
-			 ClosePopup="ClosePopup.png";
+			 StoreImage = "StoreToPNG.png";
+			 StoreDirectionsMiami = "StoreDirectionsMiami.png";
+			 ClosePopup = "ClosePopup.png";
 		}
 		ValueSendToreport=StoreLink.getText();
 		cf.test_Scroll_Page_Down();

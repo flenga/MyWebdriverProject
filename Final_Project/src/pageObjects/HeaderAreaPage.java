@@ -1,32 +1,32 @@
-package Page_Object_Factory;
+package pageObjects;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import Project_Utilities.Base_Project;
-import Project_Utilities.Project_CommonFunction;
+import Project_Utilities.BaseFunction;
+import Project_Utilities.CommonFunction;
 
-public class Header_Factory extends Base_Project
+public class HeaderAreaPage extends BaseFunction
 {
-Project_CommonFunction cf = new Project_CommonFunction();
+CommonFunction cf = new CommonFunction();
 	
 	public String ValuToreport;
-	@FindBy(how = How.LINK_TEXT, using= "Sign in")
+	@FindBy(how = How.LINK_TEXT, using = "Sign in")
 	public WebElement SignInLink;
 	
-	@FindBy(how = How.LINK_TEXT, using= "Contact us")
+	@FindBy(how = How.LINK_TEXT, using = "Contact us")
 	public WebElement ContactUs;
 	
-	@FindBy(how = How.LINK_TEXT, using= "Sign out")
+	@FindBy(how = How.LINK_TEXT, using = "Sign out")
 	public WebElement SignOut;
 	
-	@FindBy(how = How.CSS, using= "a[title='View my customer account']")
+	@FindBy(how = How.CSS, using = "a[title='View my customer account']")
 	public WebElement UserName;
 	
-	@FindBy(how = How.ID, using= "header_logo")
+	@FindBy(how = How.ID, using = "header_logo")
 	public WebElement SiteLogo;
 	
 	
-	public  Header_Factory () 
+	public  HeaderAreaPage () 
 	{
 		this.driver = driver;
 

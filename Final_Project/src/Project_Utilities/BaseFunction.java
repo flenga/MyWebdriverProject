@@ -25,7 +25,7 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
 import java.time.Instant;
 
-public class Base_Project
+public class BaseFunction
 {
 	public final static DateFormat Calendar = null;
 	public static WebDriver driver=null;
@@ -35,14 +35,14 @@ public class Base_Project
 	public static long localDate = System.currentTimeMillis()/1000;
 	public static String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());	
 	public static Screen screen;
-	public static final Logger logger=Logger.getLogger(Base_Project.class.getName());
+	public static final Logger logger = Logger.getLogger(BaseFunction.class.getName());
 	public static String WhichBrowserType;
 	//These variables can be replace with different data source and are used in SearchToShopping_Factory class and SearchArea_Factory class.
-	public String TitleInShoppingDiv="There is 1 item in your cart.";
-	public String productPrice="$24.00";
-	public String ShippingPrice="$7.01";
-	public String TotalPrice="$31.010";
-	public String ProductName="Blouse";
+	public String TitleInShoppingDiv = "There is 1 item in your cart.";
+	public String productPrice = "$24.00";
+	public String ShippingPrice = "$7.01";
+	public String TotalPrice = "$31.010";
+	public String ProductName = "Blouse";
 	
 	//Loh4j XML file
 	public void loadlog4j()
@@ -54,7 +54,7 @@ public class Base_Project
 	public  String getscreenshot() throws IOException, ParserConfigurationException, SAXException
 
 	{
-		String SsPath=getData("ScreenshotsReportFilePath")+ timeStamp()+localDate +".png";	
+		String SsPath = getData("ScreenshotsReportFilePath") + timeStamp() + localDate +".png";	
 		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(scrFile, new File(SsPath));
 		return SsPath;
@@ -75,7 +75,7 @@ public class Base_Project
 	//************************Reports function*********************************
 	public static  void  InstanceReports() throws ParserConfigurationException, SAXException, IOException
 	{
-		extent= new ExtentReports(getData("ReportFilePath") + timeStamp +"-"+localDate+getData("Reporfilename"),true);//Reporfilenamet
+		extent= new ExtentReports(getData("ReportFilePath") + timeStamp +"-"+ localDate+getData("Reporfilename"),true); //Report file name. 
 	}
 	public static void initReportTest(String testName,String testDescription)
 	{
@@ -126,30 +126,30 @@ public class Base_Project
 		driver.get(getData("URL"));
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		screen = new Screen();
-		WhichBrowserType=getData("BrowserType");
+		WhichBrowserType = getData("BrowserType");
 	}	
 	public static WebDriver ChromeDriver() throws ParserConfigurationException, SAXException, IOException
 	{
 		System.setProperty("webdriver.chrome.driver",getData("ChromeDriverPath"));
-		WebDriver driverChrome= new ChromeDriver();
+		WebDriver driverChrome = new ChromeDriver();
 		return driverChrome;
 	}
 	public static WebDriver initFFDriver() throws ParserConfigurationException, SAXException, IOException
 	{
 		System.setProperty("webdriver.gecko.driver", getData("FFDriverPath")); 
-		WebDriver driverFF= new FirefoxDriver();
+		WebDriver driverFF = new FirefoxDriver();
 		return driverFF;
 	}
 	public static WebDriver initIEDriver() throws ParserConfigurationException, SAXException, IOException
 	{
 		System.setProperty("webdriver.ie.driver",getData("IEDriverPath"));
-			WebDriver driverIE= new InternetExplorerDriver();
+			WebDriver driverIE = new InternetExplorerDriver();
 		return driverIE;
 	}
 	
 	public  String timeStamp()
 	{
-		String ThetimeStamp= new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+		String ThetimeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 		return ThetimeStamp;	
 	}
 
