@@ -12,7 +12,7 @@ public class SearchAreaPage extends BaseFunction
 	public String ShoppingCartAfter;
 	public String ValuToreport;
 	CommonFunction cf = new CommonFunction();
-	SearchToShoppingCartPage St = new SearchToShoppingCartPage();
+	SearchToShoppingCartPage Stsc = new SearchToShoppingCartPage();
 
 	@FindBy(how = How.ID,using = "search_query_top") 
 	public WebElement SearchBar;

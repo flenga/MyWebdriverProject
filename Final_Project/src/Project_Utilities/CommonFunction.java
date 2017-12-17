@@ -330,7 +330,6 @@ public class CommonFunction extends BaseFunction
 			fail("Image NOT Exists !");
 			return false;
 		}
-			
 	}
 	
 	public void SearchResult(WebElement Message) throws Exception
@@ -356,6 +355,3 @@ public class CommonFunction extends BaseFunction
 		}
 	}
 }
-
-
-

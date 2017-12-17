@@ -108,7 +108,6 @@ public class ProjectRunTests extends BaseFunction
 	{
 		EndTest("End of Test!!!");
 		FinalizedreportTest();
-
 	}
 	
 	@AfterClass
@@ -116,8 +115,5 @@ public class ProjectRunTests extends BaseFunction
 	{
 		FinalizeExtentReport();
 		driver.quit();
-
 	}
-
-
 }

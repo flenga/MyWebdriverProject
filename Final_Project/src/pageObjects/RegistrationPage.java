@@ -74,4 +74,3 @@ public class RegistrationPage extends BaseFunction
 		Thread.sleep(500);
 	}
 }
-

@@ -24,7 +24,4 @@ public class SignInErrorsPage extends BaseFunction
 	
 	@FindBy(how = How.XPATH, using = "//*[@id='create_account_error']/ol/li")
 	public WebElement ErrorForCreateAccount;
-
-	
-//	
 }

@@ -152,5 +152,4 @@ public class BaseFunction
 		String ThetimeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 		return ThetimeStamp;	
 	}
-
 }

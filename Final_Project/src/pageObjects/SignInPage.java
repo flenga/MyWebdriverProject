@@ -41,7 +41,6 @@ public class SignInPage  extends BaseFunction
 	@FindBy(how = How.XPATH, using = "//*[@id='center_column']/p") 
 	public WebElement SuccessLogin;
 
-
 	public SignInPage(WebDriver driver) 
 	{
 		this.driver = driver;
