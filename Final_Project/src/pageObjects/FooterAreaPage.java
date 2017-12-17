@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import Project_Utilities.BaseFunction;
 import Project_Utilities.CommonFunction;
+
 public class FooterAreaPage extends BaseFunction
 {
 	CommonFunction cf = new CommonFunction();

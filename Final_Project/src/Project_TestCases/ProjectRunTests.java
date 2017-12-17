@@ -15,7 +15,6 @@ import pageObjects.RegistrationPage;
 import pageObjects.SearchAreaPage;
 import pageObjects.SearchToShoppingCartPage;
 import pageObjects.SignInPage;
-
 @FixMethodOrder(MethodSorters.NAME_ASCENDING) 
 
 public class ProjectRunTests extends BaseFunction
@@ -44,7 +43,6 @@ public class ProjectRunTests extends BaseFunction
 		Saf = PageFactory.initElements(driver, SearchAreaPage.class);
 		Ssc = PageFactory.initElements(driver, SearchToShoppingCartPage.class);
 	}
-	
 	/*
 	 * This Test case check the Our stores page, by using Sikuli it will verify 
 	 * that clicking on a store location will open the correct location dialog.
