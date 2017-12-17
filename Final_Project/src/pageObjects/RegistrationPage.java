@@ -51,7 +51,6 @@ public class RegistrationPage extends BaseFunction
 	
 	public void FindElementsOnPage() throws Throwable
 	{
-		
 		cf.SplitTheDate("23/8/1956");
 		ValuToreport=FirstName.getAttribute("name");
 		cf.SendKeyAction(FirstName,"fab",ValuToreport);

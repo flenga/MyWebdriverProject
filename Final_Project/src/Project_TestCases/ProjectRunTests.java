@@ -6,7 +6,6 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 import org.openqa.selenium.support.PageFactory;
-
 import Project_Utilities.BaseFunction;
 import pageObjects.ContactUsPage;
 import pageObjects.FooterAreaPage;

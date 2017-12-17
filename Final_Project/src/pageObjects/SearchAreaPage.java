@@ -6,7 +6,6 @@ import org.openqa.selenium.support.How;
 import com.relevantcodes.extentreports.LogStatus;
 import Project_Utilities.BaseFunction;
 import Project_Utilities.CommonFunction;
-
 public class SearchAreaPage extends BaseFunction
 {
 	public String ShoppingCartAfter;

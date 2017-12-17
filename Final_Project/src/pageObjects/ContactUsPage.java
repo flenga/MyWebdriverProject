@@ -7,7 +7,6 @@ import com.relevantcodes.extentreports.LogStatus;
 import Project_Utilities.BaseFunction;
 import Project_Utilities.CommonFunction;
 import pageObjects.HeaderAreaPage;
-
 public class ContactUsPage  extends BaseFunction
 {
 	CommonFunction cf = new CommonFunction();

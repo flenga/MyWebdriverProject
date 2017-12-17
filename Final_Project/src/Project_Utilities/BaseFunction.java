@@ -24,7 +24,6 @@ import com.relevantcodes.extentreports.LogStatus;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
 import java.time.Instant;
-
 public class BaseFunction
 {
 	public final static DateFormat Calendar = null;

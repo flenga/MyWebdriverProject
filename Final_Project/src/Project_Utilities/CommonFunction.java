@@ -25,7 +25,6 @@ import jxl.Workbook;
 import com.relevantcodes.extentreports.LogStatus;
 import jdk.internal.org.xml.sax.SAXException;
 import static org.junit.Assert.fail;
-
 public class CommonFunction extends BaseFunction
 {
 	static Logger logger=Logger.getLogger(CommonFunction.class);
