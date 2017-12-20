@@ -48,18 +48,18 @@ public class SearchToShoppingCartPage extends BaseFunction
 	
 	public void VerifyElementIndiv() throws Exception
 	{
-		ValueSendToreport=CloseDiv.getAttribute("title");
+		ValueSendToreport = CloseDiv.getAttribute("title");
 		cf.ClickOnElement(CloseDiv,ValueSendToreport);
 		try 
 		{
-			ShoppingCartAfter=ShoppingCart.getText();
-			logger.info("The Element: "+ ShoppingCartAfter +" appear  !!");
-			test.log(LogStatus.PASS, "The Element :"+ ShoppingCartAfter +"  appear !!");
+			ShoppingCartAfter = ShoppingCart.getText();
+			logger.info("The Element: "+ ShoppingCartAfter +" appear!!");
+			test.log(LogStatus.PASS, "The Element :"+ ShoppingCartAfter +" appear!!");
 		}
 		catch(Exception e) 
 		{
-			logger.error("Failed to get the text from "+ ShoppingCart +"  : "+e.getMessage());
-			test.log(LogStatus.FAIL,"Failed to get text from "+ ShoppingCart +"  :  see screenshot: "+ e.getMessage() +" "+ test.addScreenCapture(getscreenshot()));
+			logger.error("Failed to get the text from "+ ShoppingCart +" : "+ e.getMessage());
+			test.log(LogStatus.FAIL,"Failed to get text from "+ ShoppingCart +" : see screenshot: "+ e.getMessage() +" "+ test.addScreenCapture(getScreenshot()));
 		}
 	}
 }

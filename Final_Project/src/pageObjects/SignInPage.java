@@ -54,18 +54,18 @@ public class SignInPage  extends BaseFunction
 		*to collect the data getCell(4,i) the first number represent the column and the second value represent the row.   
 		*/
 		cf.ReadExcelFile();
-		int rowcount=cf.wrkbook.getSheet(1).getRows();
+		int rowcount = cf.wrkbook.getSheet(1).getRows();
 		String ExpectedColor;
-		String  ExpectedMessage1;
+		String  ExpectedMessage;
 		for(int i=1;i<rowcount;i++)
 		{
 			try
 			{
-				ExpectedColor=cf.wrkbook.getSheet(1).getCell(2,i).getContents();
-				ExpectedMessage1=cf.wrkbook.getSheet(1).getCell(3,i).getContents();
+				ExpectedColor = cf.wrkbook.getSheet(1).getCell(2,i).getContents();
+				ExpectedMessage = cf.wrkbook.getSheet(1).getCell(3,i).getContents();
 				ValuToreport = Emailaddress.getAttribute("name");
 				cf.SendKeyAction(Emailaddress,cf.wrkbook.getSheet(1).getCell(0,i).getContents(),ValuToreport);	
-				ValuToreport=Password.getAttribute("name");
+				ValuToreport = Password.getAttribute("name");
 				cf.SendKeyAction(Password,cf.wrkbook.getSheet(1).getCell(1,i).getContents(),ValuToreport);	
 				SignInButton.click();
 				/*
@@ -75,9 +75,9 @@ public class SignInPage  extends BaseFunction
 				
 				if(ExpectedColor.equals("green"))
 				{
-					cf.NoErrorMessageExist(SuccessLogin, ExpectedColor,ExpectedMessage1);
+					cf.NoErrorMessageExist(SuccessLogin,ExpectedColor,ExpectedMessage);
 					logger.info("Cradiantial "+ cf.wrkbook.getSheet(1).getCell(0,i).getContents() +", and Password: "+ cf.wrkbook.getSheet(1).getCell(1,i).getContents() +"were OK");
-					test.log(LogStatus.PASS, "Cradiantial "+ cf.wrkbook.getSheet(1).getCell(0,i).getContents()+", and Password: "+ cf.wrkbook.getSheet(1).getCell(1,i).getContents() +"were OK and user login to ");
+					test.log(LogStatus.PASS, "Cradiantial "+ cf.wrkbook.getSheet(1).getCell(0,i).getContents() +", and Password: "+ cf.wrkbook.getSheet(1).getCell(1,i).getContents() +"were OK and user login to ");
 					
 					if(SignOut.isDisplayed())
 					{
@@ -87,17 +87,17 @@ public class SignInPage  extends BaseFunction
 				}
 				else 										
 				{
-					cf.NoErrorMessageExist(ErrorForSignInSpecific, ExpectedColor, ExpectedMessage1);
+					cf.NoErrorMessageExist(ErrorForSignInSpecific,ExpectedColor,ExpectedMessage);
 					logger.info("Cradiantial "+ cf.wrkbook.getSheet(1).getCell(0,i).getContents() +", and Password: "+ cf.wrkbook.getSheet(1).getCell(1,i).getContents() +"were OK - Which FAILED to login");
 					test.log(LogStatus.PASS, "Cradiantial "+ cf.wrkbook.getSheet(1).getCell(0,i).getContents() +", and Password: "+ cf.wrkbook.getSheet(1).getCell(1,i).getContents() +"were OK - Which FAILED to login");
-					ValuToreport=SignIn.getAttribute("title");
+					ValuToreport = SignIn.getAttribute("title");
 					cf.ClickOnElement(SignIn,ValuToreport);
 				}
 			} 
 			catch (Exception e) 
 			{
 				logger.error("There was a problem while trying to Sign in, see error : "+ e.getMessage());
-				test.log(LogStatus.FAIL,"There was a problem while trying to Sign in, see error : "+ e.getMessage() +" "+ test.addScreenCapture(getscreenshot()));
+				test.log(LogStatus.FAIL,"There was a problem while trying to Sign in, see error : "+ e.getMessage() +" "+ test.addScreenCapture(getScreenshot()));
 			}
 		}
 	}

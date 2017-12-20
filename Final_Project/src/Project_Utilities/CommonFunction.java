@@ -77,7 +77,7 @@ public class CommonFunction extends BaseFunction
 		catch (HeadlessException e) 
 		{
 			logger.error("Something went wrong with this action!!!");
-			test.log(LogStatus.FAIL, "Action Failed   " + e.getMessage() +". /n see Screen Shot: "+test.addScreenCapture(getscreenshot()));
+			test.log(LogStatus.FAIL, "Action Failed   " + e.getMessage() +". /n see Screen Shot: "+test.addScreenCapture(getScreenshot()));
 			e.printStackTrace();
 		}
 	}
@@ -95,7 +95,7 @@ public class CommonFunction extends BaseFunction
 		catch (Exception e) 
 		{
 			logger.error("Something went wrong with the drop down!!!");
-			test.log(LogStatus.FAIL, "Element NOT Not Selected , see Screen Shot: " + e.getMessage() +" "+ test.addScreenCapture(getscreenshot()));
+			test.log(LogStatus.FAIL, "Element NOT Not Selected , see Screen Shot: " + e.getMessage() +" "+ test.addScreenCapture(getScreenshot()));
 			e.printStackTrace();
 		}	
 	}
@@ -129,7 +129,7 @@ public class CommonFunction extends BaseFunction
 		catch(Exception e)
 		{
 			logger.error("Failed to click on the element: \""+ stringToAddtoReport +"\"  !! see screenshot: "+ e.getMessage() );
-			test.log(LogStatus.FAIL,"Failed to click on the element: \""+ stringToAddtoReport +"\" !! see screenshot: "+ e.getMessage() +" "+ test.addScreenCapture(getscreenshot()));
+			test.log(LogStatus.FAIL,"Failed to click on the element: \""+ stringToAddtoReport +"\" !! see screenshot: "+ e.getMessage() +" "+ test.addScreenCapture(getScreenshot()));
 		}
 	}
 
@@ -145,7 +145,7 @@ public class CommonFunction extends BaseFunction
 		catch(Exception e)
 		{
 			logger.error("Failed to Send value : \"" + ValueToSend +"\" from field \"" + ValueToreport +"\"!! "+ e.getMessage() );
-			test.log(LogStatus.FAIL,"Failed to Send value : \"" + ValueToSend +"\" from field \"" + ValueToreport +"\" !! see screenshot: "+ e.getMessage() +" "+ test.addScreenCapture(getscreenshot()));
+			test.log(LogStatus.FAIL,"Failed to Send value : \"" + ValueToSend +"\" from field \"" + ValueToreport +"\" !! see screenshot: "+ e.getMessage() +" "+ test.addScreenCapture(getScreenshot()));
 		}
 	}
 
@@ -156,15 +156,15 @@ public class CommonFunction extends BaseFunction
 		{
 			WebDriverWait wait = new WebDriverWait(driver,10);
 			wait.until(ExpectedConditions.visibilityOf(ElementToWait));
-			logger.info("The element , succeeded to loaded!!!");
-			test.log(LogStatus.PASS,"The element , succeeded to loaded!!!!");
+			logger.info("The element, succeeded to loaded!!!");
+			test.log(LogStatus.PASS,"The element, succeeded to loaded!!!!");
 		} 
 		
 		catch(Exception e)
 		{
 			e.getMessage();
 			logger.error("Failed to loaded element!! "+ e.getMessage() );
-			test.log(LogStatus.FAIL,"Failed to loaded element!! see screenshot: "+ e.getMessage() +" "+ test.addScreenCapture(getscreenshot()));
+			test.log(LogStatus.FAIL,"Failed to loaded element!! see screenshot: "+ e.getMessage() +" "+ test.addScreenCapture(getScreenshot()));
 			fail("Element NOT Exists !");
 		}
 		
@@ -183,7 +183,7 @@ public class CommonFunction extends BaseFunction
 		catch(AssertionError e)
 		{
 			
-			test.log(LogStatus.FAIL,"assertion failed the two values: "+ Expected +" and second one is: "+Actual+": "+ e.getMessage() +" "+ test.addScreenCapture(getscreenshot()));
+			test.log(LogStatus.FAIL,"assertion failed the two values: "+ Expected +" and second one is: "+Actual+": "+ e.getMessage() +" "+ test.addScreenCapture(getScreenshot()));
 			logger.error("Something went wrong while trying to Assert the two values: "+ Expected +" and second one is: "+Actual);
 		}
 	}
@@ -200,95 +200,69 @@ public class CommonFunction extends BaseFunction
 		catch(AssertionError e)
 		{
 			logger.error("Something went wrong while trying to Assert the first value"+ Expected + "And the second value is "+Actual );
-			test.log(LogStatus.FAIL,"assertion failed: "+ e.getMessage() +" "+ test.addScreenCapture(getscreenshot()));
+			test.log(LogStatus.FAIL,"assertion failed: "+ e.getMessage() +" "+ test.addScreenCapture(getScreenshot()));
 		}
 	}
 
 	// Function that verify results using DDT Currently using in 2 test (logIn test and Contact us test) 
-	public void NoErrorMessageExist(WebElement Message, String expectedColor1,String string) throws Exception
+	public void NoErrorMessageExist(WebElement Message, String expectedColor,String ExpectedString) throws Exception
 	{
 		String message=Message.getText();
 		try
 		{
 			Message.isDisplayed();
-			Assert.assertEquals(message,string);
+			Assert.assertEquals(message,ExpectedString);
 			logger.info("The message that appear was :"+ message);
 			test.log(LogStatus.PASS,"Message shown after action is:" + message);
 		}
-		catch(Exception  e)
+		catch(Exception e)
 		{
-			logger.error("There was an error while sending the form see error message: "+message +" "+ e.getMessage());
-			test.log(LogStatus.FAIL, "There was an error while sending the form see error message: "+ message +" "+ e.getMessage() +" "+ test.addScreenCapture(getscreenshot()));
+			logger.error("There was an error while sending the form see error message: "+ message +" "+ e.getMessage());
+			test.log(LogStatus.FAIL, "There was an error while sending the form see error message: "+ message +" "+ e.getMessage() +" "+ test.addScreenCapture(getScreenshot()));
 		}
 		catch(AssertionError e)
 		{
-			logger.error("The messages are not equal: "+ message + "And the second value is "+ string );
-			test.log(LogStatus.FAIL,"assertion failed: "+ e.getMessage() +" "+ test.addScreenCapture(getscreenshot()));
+			logger.error("The messages are not equal: "+ message + "And the second value is "+ ExpectedString);
+			test.log(LogStatus.FAIL,"assertion failed: "+ e.getMessage() +" "+ test.addScreenCapture(getScreenshot()));
 		}
 	}
 
 	// Verify if element exist in page
-	public void verifyElementExist(WebElement elementExist) throws Exception, IOException, ParserConfigurationException, SAXException
-	{
-		String VerifyElement = null;
-		try
-		{
-			VerifyElement=elementExist.getText();
-			elementExist.isDisplayed();
-			logger.info("The Element "+ VerifyElement +" is displayed on page!!");
-			test.log(LogStatus.PASS, "The Element: "+ VerifyElement +"  is displayed on page!!");
-		}
-		
-		catch(NoSuchElementException e)
-		{
-			logger.error("The Element: is not displayed on page!!");
-			test.log(LogStatus.FAIL,"The Element: is not displayed on page!! see screenshot:  "+ test.addScreenCapture(getscreenshot()));
-			fail("Element NOT Exists !");
-		}
-		catch (TimeoutException e) 
-		{
-			logger.error("The Element: is not displayed on page!!  "+ e.getMessage());
-			test.log(LogStatus.FAIL,"The Element: is not displayed on page!! see screenshot:  "+ test.addScreenCapture(getscreenshot()));
-		}
-	}
-	
-	public boolean  verifyElementExist_new(WebElement elementExist) throws Exception, IOException, ParserConfigurationException, SAXException
+	public boolean verifyElementExist(WebElement elementExist) throws Exception, IOException, ParserConfigurationException, SAXException
 	{
 		String VerifyElement="";
-		
 		try
 		{
 			VerifyElement=elementExist.getText();
 			logger.info("The Element "+ VerifyElement +" is displayed on page!!");
-			test.log(LogStatus.PASS, "The Element: "+ VerifyElement +"  is displayed on page!!");
+			test.log(LogStatus.PASS, "The Element: "+ VerifyElement +" is displayed on page!!");
 			return true;
 		}
 		catch(Exception e)
 		{
 			logger.error("The Element: "+ elementExist +" is not displayed on page!!  "+ e.getMessage());
-			test.log(LogStatus.FAIL,"The Element: "+ elementExist +"  is not displayed on page!! see screenshot: "+ e.getMessage() +" "+ test.addScreenCapture(getscreenshot()));
+			test.log(LogStatus.FAIL,"The Element: "+ elementExist +"  is not displayed on page!! see screenshot: "+ e.getMessage() +" "+ test.addScreenCapture(getScreenshot()));
 			fail("Element NOT Exists !");
 			return false;
 		}
 	}
 		
 	//Check if element contain text
-	public void verifyTextInElement( WebElement elementExistInPage ,String StrToFind) throws Exception 
+	public void verifyTextInElement( WebElement elementExistInPage ,String StringToFind) throws Exception 
 	{
 		String ElementExistInPage=elementExistInPage.getText();	
 		try
 		{
-			elementExistInPage.getText().contains(StrToFind);
+			elementExistInPage.getText().contains(StringToFind);
 			logger.info("The Elements are in page!!");
 			test.log(LogStatus.PASS, "The Elements are in page!!");
 		}
 		catch(Exception e)
 		{
 			logger.error("The element: "+ ElementExistInPage +" doesn't exist on page : "+ e.getMessage());
-			test.log(LogStatus.FAIL,"The element: "+ ElementExistInPage +" doesn't exist on page !! see screenshot: "+ e.getMessage() +" "+ test.addScreenCapture(getscreenshot()));
+			test.log(LogStatus.FAIL,"The element: "+ ElementExistInPage +" doesn't exist on page !! see screenshot: "+ e.getMessage() +" "+ test.addScreenCapture(getScreenshot()));
 			fail("Text NOT Exists !");
 		}
-
 	}
 
 	//Clicking on image using Sikuli
@@ -300,12 +274,12 @@ public class CommonFunction extends BaseFunction
 			screen.click(getData("ImagePath") +imageName);
 			Thread.sleep(500);
 			logger.info("Clicked on Image: "+ imageNameToClick +"!!");
-			test.log(LogStatus.PASS, "Clicked on Image "+ imageNameToClick +" !!");
+			test.log(LogStatus.PASS, "Clicked on Image "+ imageNameToClick +"!!");
 		}
 		catch(Exception e)
 		{
 			logger.error("Couldn't find image: "+ imageNameToClick +", "+ e.getMessage());
-			test.log(LogStatus.FAIL, "Couldn't find the image!, see Screen Shot: "+ e.getMessage() +" " + test.addScreenCapture(getscreenshot()));
+			test.log(LogStatus.FAIL, "Couldn't find the image!, see Screen Shot: "+ e.getMessage() +" " + test.addScreenCapture(getScreenshot()));
 			fail("Image NOT Exists !");
 		}
 	}
@@ -326,7 +300,7 @@ public class CommonFunction extends BaseFunction
 		catch (Exception e)
 		{
 			logger.error("The image: "+ imageNameToVerify +" doesn't exist on page: "+ e.getMessage());
-			test.log(LogStatus.FAIL, "Element NOT Exists ! , see Screen Shot: "+e.getMessage() +" " + test.addScreenCapture(getscreenshot()));
+			test.log(LogStatus.FAIL, "Element NOT Exists ! , see Screen Shot: "+e.getMessage() +" " + test.addScreenCapture(getScreenshot()));
 			fail("Image NOT Exists !");
 			return false;
 		}
@@ -335,23 +309,23 @@ public class CommonFunction extends BaseFunction
 	public void SearchResult(WebElement Message) throws Exception
 	{
 		String message=Message.getText();
-		String Expectedstring = "0 results have been found.";
+		String ExpectedMessage = "0 results have been found.";
 		try
 		{
 			Message.isDisplayed();
-			Assert.assertNotEquals(message, Expectedstring);
+			Assert.assertNotEquals(message, ExpectedMessage);
 			logger.info("The message that appear was:"+ message);
 			test.log(LogStatus.PASS,"Message shown after action is:" + message);
 		}
 		catch(Exception e)
 		{
 			logger.error("There was an error while sending the form see error message :"+ message +" "+ e.getMessage());
-			test.log(LogStatus.FAIL, "There was an error while sending the form see error message :"+ message +" "+ e.getMessage() +" "+ test.addScreenCapture(getscreenshot()));
+			test.log(LogStatus.FAIL, "There was an error while sending the form see error message :"+ message +" "+ e.getMessage() +" "+ test.addScreenCapture(getScreenshot()));
 		}
 		catch(AssertionError e)
 		{
-			logger.error("The messages are equal for before and after "+ message + "And the second value is "+Expectedstring );
-			test.log(LogStatus.FAIL,"assertion failed: "+ e.getMessage() +" "+ test.addScreenCapture(getscreenshot()));
+			logger.error("The messages are equal for before and after "+ message + "And the second value is "+ExpectedMessage );
+			test.log(LogStatus.FAIL,"assertion failed: "+ e.getMessage() +" "+ test.addScreenCapture(getScreenshot()));
 		}
 	}
 }

@@ -39,7 +39,7 @@ public class OurStoresPage extends BaseFunction
 		if(WhichBrowserType.equals("IE"))
 		{
 			 StoreImage = "StoreToPNG_IE.png";
-			 StoreDirectionsMiami  ="StoreDirectionsMiami_IE.png";
+			 StoreDirectionsMiami = "StoreDirectionsMiami_IE.png";
 			 ClosePopup = "ClosePopup_IE.png";
 		}
 		else
@@ -48,10 +48,10 @@ public class OurStoresPage extends BaseFunction
 			 StoreDirectionsMiami = "StoreDirectionsMiami.png";
 			 ClosePopup = "ClosePopup.png";
 		}
-		ValueSendToreport=StoreLink.getText();
+		ValueSendToreport = StoreLink.getText();
 		cf.test_Scroll_Page_Down();
 		cf.ClickOnElement(StoreLink,ValueSendToreport);
-		cf.verifyElementExist_new(MapDiv);
+		cf.verifyElementExist(MapDiv);
 		cf.verifyImageExists(StoreImage);
 		cf.clickOnImage(StoreImage);
 		cf.verifyImageExists(StoreDirectionsMiami);

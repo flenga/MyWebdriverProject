@@ -51,8 +51,7 @@ public class BaseFunction
 	}
 
 	//Screenshot function
-	public  String getscreenshot() throws IOException, ParserConfigurationException, SAXException
-
+	public  String getScreenshot() throws IOException, ParserConfigurationException, SAXException
 	{
 		String SsPath = getData("ScreenshotsReportFilePath") + timeStamp() + localDate +".png";	
 		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
@@ -63,7 +62,6 @@ public class BaseFunction
 	//Reading and Connection to XML file
 	public static String getData (String nodeName) throws ParserConfigurationException, SAXException, IOException
 	{
-		
 		File fXmlFile = new File("External_Files/XML/Project_Conf.xml");
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -128,18 +126,21 @@ public class BaseFunction
 		screen = new Screen();
 		WhichBrowserType = getData("BrowserType");
 	}	
+	
 	public static WebDriver ChromeDriver() throws ParserConfigurationException, SAXException, IOException
 	{
 		System.setProperty("webdriver.chrome.driver",getData("ChromeDriverPath"));
 		WebDriver driverChrome = new ChromeDriver();
 		return driverChrome;
 	}
+	
 	public static WebDriver initFFDriver() throws ParserConfigurationException, SAXException, IOException
 	{
 		System.setProperty("webdriver.gecko.driver", getData("FFDriverPath")); 
 		WebDriver driverFF = new FirefoxDriver();
 		return driverFF;
 	}
+	
 	public static WebDriver initIEDriver() throws ParserConfigurationException, SAXException, IOException
 	{
 		System.setProperty("webdriver.ie.driver",getData("IEDriverPath"));
@@ -147,7 +148,7 @@ public class BaseFunction
 		return driverIE;
 	}
 	
-	public  String timeStamp()
+	public String timeStamp()
 	{
 		String ThetimeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 		return ThetimeStamp;	
