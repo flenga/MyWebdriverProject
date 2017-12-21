@@ -1,4 +1,4 @@
-package Project_Utilities;
+package projectUtilities;
 import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
@@ -40,8 +40,8 @@ public class BaseFunction
 	//These variables can be replace with different data source and are used in SearchToShopping_Factory class and SearchArea_Factory class.
 	public String TitleInShoppingDiv = "There is 1 item in your cart.";
 	public String productPrice = "$24.00";
-	public String ShippingPrice = "$7.01";
-	public String TotalPrice = "$31.010";
+	public String ShippingPrice = "$7.00";
+	public String TotalPrice = "$31.00";
 	public String ProductName = "Blouse";
 	
 	//Loh4j XML file

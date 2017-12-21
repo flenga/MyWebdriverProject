@@ -4,9 +4,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import com.relevantcodes.extentreports.LogStatus;
-import Project_Utilities.BaseFunction;
-import Project_Utilities.CommonFunction;
+
 import pageObjects.HeaderAreaPage;
+import projectUtilities.BaseFunction;
+import projectUtilities.CommonFunction;
 
 public class ContactUsPage  extends BaseFunction
 {

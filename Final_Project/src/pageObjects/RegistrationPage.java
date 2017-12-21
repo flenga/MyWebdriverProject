@@ -4,8 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import Project_Utilities.BaseFunction;
-import Project_Utilities.CommonFunction;
+
+import projectUtilities.BaseFunction;
+import projectUtilities.CommonFunction;
 
 public class RegistrationPage extends BaseFunction
 {
