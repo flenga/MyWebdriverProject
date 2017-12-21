@@ -119,6 +119,7 @@ public class BaseFunction
 			driver = initIEDriver();
 			break;
 		}
+		
 		logger.info("Open brwoser :"+BrowserType);
 		driver.manage().window().maximize();
 		driver.get(getData("URL"));
