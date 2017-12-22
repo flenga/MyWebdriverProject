@@ -21,7 +21,8 @@ public class SearchAreaPage extends BaseFunction
 	@FindBy(how = How.NAME,using = "submit_search") 
 	public WebElement SubmitButton; 
 
-	@FindBy(how = How.CSS,using = "span.label-success") 
+	//@FindBy(how = How.CSS,using = "span.label-success") //available-now
+	@FindBy(how = How.CSS,using = "span.available-now")
 	public WebElement InStock;
 
 	@FindBy(how = How.LINK_TEXT,using = "Add to cart") 
@@ -48,7 +49,8 @@ public class SearchAreaPage extends BaseFunction
 	@FindBy(how = How.XPATH,using = "//*[@id='layer_cart']/div[1]/div[1]/span[1]") 
 	public WebElement CloseDiv1;
 
-	@FindBy(how = How.XPATH,using = "//*[@id='layer_cart']/div[1]/div[2]/span")
+	//@FindBy(how = How.XPATH,using = "//*[@id='layer_cart']/div[1]/div[2]/span")////
+	@FindBy(how = How.XPATH,using = "//*[@id='layer_cart']/div[1]/div[2]/h2/span[2]")
 	public WebElement TitleShoppingDiv1;
 
 	@FindBy(how = How.XPATH,using = "//*[@id='layer_cart']/div[1]/div[2]/div[1]/span") 
@@ -74,7 +76,7 @@ public class SearchAreaPage extends BaseFunction
 	public void SearchForAnItemAndAddToShoppingCart() throws Exception
 	{
 		ValuToreport = SearchBar.getAttribute("placeholder");
-		cf.SendKeyAction(SearchBar, "Blouse",ValuToreport);
+		cf.SendKeyAction(SearchBar,TermSearch ,ValuToreport);
 		ValuToreport = ShoppingCart.getText();
 		cf.ClickOnElement(SubmitButton,ValuToreport);
 		cf.waitToElement(SearchTerm);
@@ -94,7 +96,7 @@ public class SearchAreaPage extends BaseFunction
 			{
 				cf.verifyElementExist(TitleShoppingDiv1);
 				cf.asserequal( TitleShoppingDiv1.getText(),TitleInShoppingDiv);
-				cf.asserequal(TotalProducts1.getText(),productPrice);
+				cf.asserequal(TotalProducts1.getText(),ProductPrice);
 				cf.asserequal(Totalshipping.getText(),ShippingPrice);
 				cf.asserequal(TotalIncluds.getText(),TotalPrice);
 				cf.asserequal(ProductTitle.getText(),ProductName);

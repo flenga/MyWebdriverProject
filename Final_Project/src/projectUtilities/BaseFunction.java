@@ -39,10 +39,11 @@ public class BaseFunction
 	public static String WhichBrowserType;
 	//These variables can be replace with different data source and are used in SearchToShopping_Factory class and SearchArea_Factory class.
 	public String TitleInShoppingDiv = "There is 1 item in your cart.";
-	public String productPrice = "$24.00";
-	public String ShippingPrice = "$7.00";
-	public String TotalPrice = "$31.00";
+	public String ProductPrice = "$27.00";
+	public String ShippingPrice = "$2.00";
+	public String TotalPrice = "$29.00";
 	public String ProductName = "Blouse";
+	public String TermSearch = "Blouse";
 	
 	//Loh4j XML file
 	public void loadlog4j()

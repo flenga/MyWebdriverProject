@@ -4,7 +4,7 @@
     <FFDriverPath>External_Files/Drivers/FF/geckodriver.exe</FFDriverPath>
     <IEDriverPath>External_Files/Drivers/IE/IEDriverServer.exe</IEDriverPath>
     <ChromeDriverPath>External_Files/Drivers/Chrome/chromedriver.exe</ChromeDriverPath>
-    <URL>http://yoniflenner.net/prestashop/index.php</URL>
+    <URL>http://automationpractice.com/index.php</URL>
     
   <!-- Images to compare-path -->
  <ImagePath>External_Files//Sikuli_Images//</ImagePath> 
