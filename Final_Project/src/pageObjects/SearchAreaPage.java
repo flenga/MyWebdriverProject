@@ -21,7 +21,6 @@ public class SearchAreaPage extends BaseFunction
 	@FindBy(how = How.NAME,using = "submit_search") 
 	public WebElement SubmitButton; 
 
-	//@FindBy(how = How.CSS,using = "span.label-success") //available-now
 	@FindBy(how = How.CSS,using = "span.available-now")
 	public WebElement InStock;
 
@@ -49,7 +48,6 @@ public class SearchAreaPage extends BaseFunction
 	@FindBy(how = How.XPATH,using = "//*[@id='layer_cart']/div[1]/div[1]/span[1]") 
 	public WebElement CloseDiv1;
 
-	//@FindBy(how = How.XPATH,using = "//*[@id='layer_cart']/div[1]/div[2]/span")////
 	@FindBy(how = How.XPATH,using = "//*[@id='layer_cart']/div[1]/div[2]/h2/span[2]")
 	public WebElement TitleShoppingDiv1;
 
