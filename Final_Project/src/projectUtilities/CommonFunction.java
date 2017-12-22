@@ -1,5 +1,4 @@
 package projectUtilities;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Hashtable;
@@ -14,8 +13,6 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
