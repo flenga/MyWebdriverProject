@@ -7,8 +7,9 @@ I used in the project the Page Object Pattern using PageFactory, containing thre
 * Project_TestCases
 
 ### The project include:
-* Reports [extentreports](http://extentreports.com/community/#Version_2) 
-* logs file[Log4j](https://logging.apache.org/log4j/2.x/)
+***
+* Reports [extent reports](http://extentreports.com/community/#Version_2) 
+* logs file [Log4j](https://logging.apache.org/log4j/2.x/) 
 * Sikuli(comparing images)[Sikuli](http://sikulix.com/)
 * DDT -using Excel file
 
