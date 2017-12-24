@@ -6,7 +6,11 @@ I used in the project the Page Object Pattern using PageFactory, the project con
 * projectUtilities
 * Project_TestCases
 
-The project cotain several other files such as: Reports, logs file, Sikuli(compare images), Excel file etc... and written in Java.
+The project cotain several other files such as: 
+* Reports
+* logs file
+* Sikuli(comparing images)
+* Excel file - DDT 
 ### Drivers
 There is a folder with 3 drivers:
 * Chromedriver 
