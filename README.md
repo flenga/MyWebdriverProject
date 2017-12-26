@@ -1,16 +1,19 @@
 # DemoForReview
-This is my Webdriver project written in Java, on a [demo site](http://yoniflenner.net/prestashop/index.php). 
+This is a Webdriver project Java based Selenium/WebDriver tests, on a [demo site](http://yoniflenner.net/prestashop/index.php). 
 The site is a demo of an e-commerce site, and the project cover several flows om the site.
-I used in the project the Page Object Pattern using PageFactory, containing three main sections:
-* pageObjects - 
-* projectUtilities -
-* Project_TestCases -
+I used in the project the Page Object Pattern using PageFactory, Framework contain three major sections:
+* pageObjects
+* projectUtilities 
+* Project_TestCases
 
-## The project include:
-* Reports [extent reports](http://extentreports.com/community/#Version_2) 
-* logs file [Log4j](https://logging.apache.org/log4j/2.x/) 
-* Sikuli(comparing images)[Sikuli](http://sikulix.com/)
-* DDT -using Excel file
+## The project included:
+* Common function class
+* Page Object Pattern using PageFactory
+* Commonly used test utility classes
+* Reports  using [extent reports](http://extentreports.com/community/#Version_2) 
+* logs file using [Log4j](https://logging.apache.org/log4j/2.x/).
+* Sikuli (comparing images engine) [Sikuli](http://sikulix.com/) get version 1.1.1 , In order to work with Sikuli Webdriver it needed to download Sikuli file + add sikulixapi.jar to project build path. 
+* DDT - used Excel file with data to run some test cases.
 
 
 ## Drivers
