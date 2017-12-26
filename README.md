@@ -1,4 +1,4 @@
-# DemoForReview
+# My Webdriver Project
 TThis project is written in Java and will serve an example of implementing a Selenium test project with Selenium, the test run on a [demo site](http://yoniflenner.net/prestashop/index.php). 
 The site is a demo of an e-commerce site, and the project cover several flows om the site.
 I used in the project the Page Object Pattern using PageFactory, Framework contain three major sections:
