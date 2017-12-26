@@ -51,7 +51,7 @@ public class BaseFunction
 			DOMConfigurator.configure("log4j.xml");
 	}
 
-	//Screenshot function
+	//Taking Screenshot function
 	public  String getScreenshot() throws IOException, ParserConfigurationException, SAXException
 	{
 		String SsPath = getData("ScreenshotsReportFilePath") + timeStamp() + localDate +".png";	
