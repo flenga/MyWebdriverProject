@@ -3,8 +3,8 @@ This is my Webdriver project written in Java, on a [demo site](http://yoniflenne
 The site is a demo of an e-commerce site, and the project cover several flows om the site.
 I used in the project the Page Object Pattern using PageFactory, containing three main sections:
 * pageObjects - 
-* projectUtilities
-* Project_TestCases
+* projectUtilities -
+* Project_TestCases -
 
 ## The project include:
 * Reports [extent reports](http://extentreports.com/community/#Version_2) 
