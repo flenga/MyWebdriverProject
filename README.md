@@ -6,15 +6,14 @@ I used in the project the Page Object Pattern using PageFactory, containing thre
 * projectUtilities
 * Project_TestCases
 
-### The project include:
-***
+## The project include:
 * Reports [extent reports](http://extentreports.com/community/#Version_2) 
 * logs file [Log4j](https://logging.apache.org/log4j/2.x/) 
 * Sikuli(comparing images)[Sikuli](http://sikulix.com/)
 * DDT -using Excel file
 
 
-### Drivers
+## Drivers
 There is a folder with 3 drivers:
 * Chromedriver 
 * Firefox 
