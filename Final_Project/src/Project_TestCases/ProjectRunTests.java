@@ -16,7 +16,6 @@ public class ProjectRunTests extends BaseFunction
 	@Test
 	public void test01_StoreLocator() throws Exception
 	{
-		//StartTest(CommonFunction.SeperateString(name.getMethodName().split("_")[1])+" Test #1");
 		Osf.OpenOneOfTheStoresLocationCheckingAddressAndDialog();
 	}
 	
@@ -28,7 +27,6 @@ public class ProjectRunTests extends BaseFunction
 	@Test
 	public void test02_SignIn() throws Exception 
 	{
-		//StartTest(CommonFunction.SeperateString(name.getMethodName().split("_")[1])+" Test #2");
 		Hef.ClickOnSignIn();
 		fsf.LoginToPage();
 	}
@@ -40,7 +38,6 @@ public class ProjectRunTests extends BaseFunction
 	@Test
 	public void test03_SendContactUsForm() throws Exception 
 	{
-		//StartTest(CommonFunction.SeperateString(name.getMethodName().split("_")[1])+" Test #3");
 		Hef.ClickOnContactUs();
 		Cuf.SendContactFormAmessage();
 		Hef.ClickOnLogoSite();
@@ -54,7 +51,6 @@ public class ProjectRunTests extends BaseFunction
 	@Test
 	public void test04_SearchForAnItemAndAddToCart() throws Exception 
 	{
-		//StartTest(CommonFunction.SeperateString(name.getMethodName().split("_")[1])+" Test #4");
 		Saf.SearchForAnItemAndAddToShoppingCart();
 	}
 
