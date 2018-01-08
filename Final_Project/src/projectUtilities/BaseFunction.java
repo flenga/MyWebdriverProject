@@ -21,8 +21,25 @@ import org.sikuli.script.Screen;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
+
+import pageObjects.ContactUsPage;
+import pageObjects.FooterAreaPage;
+import pageObjects.HeaderAreaPage;
+import pageObjects.OurStoresPage;
+import pageObjects.RegistrationPage;
+import pageObjects.SearchAreaPage;
+import pageObjects.SearchToShoppingCartPage;
+import pageObjects.SignInPage;
+
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Rule;
+import org.junit.rules.TestName;
+
 import java.time.Instant;
 
 public class BaseFunction
@@ -45,6 +62,17 @@ public class BaseFunction
 	public String ProductName = "Blouse";
 	public String TermSearch = "Blouse";
 	
+	public static SignInPage fsf;
+	public static HeaderAreaPage Hef;
+	public static FooterAreaPage Fef;
+	public static RegistrationPage Ref;
+	public static ContactUsPage  Cuf;
+	public static OurStoresPage Osf;
+	public static SearchAreaPage Saf;
+	public static SearchToShoppingCartPage Ssc;
+	
+	
+	
 	//Loh4j XML file
 	public void loadlog4j()
 	{
@@ -52,7 +80,7 @@ public class BaseFunction
 	}
 
 	//Taking Screenshot function
-	public  String getScreenshot() throws IOException, ParserConfigurationException, SAXException
+	public static  String getScreenshot() throws IOException, ParserConfigurationException, SAXException
 	{
 		String SsPath = getData("ScreenshotsReportFilePath") + timeStamp() + localDate +".png";	
 		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
@@ -92,17 +120,17 @@ public class BaseFunction
 	//*********************end Report function******************************* 
 
 	//Adding report to log and reports when test case start.
-	public static void StartTest(String OpeNTest)
+	public static void StartTest(String OpenTest)
 	{
-		logger.info(OpeNTest);
-		test.log(LogStatus.PASS, OpeNTest);
+		logger.info(OpenTest);
+		test.log(LogStatus.PASS, OpenTest);
 	}
 	
 	//Adding report to log and reports when test case End.
-		public static void EndTest(String OpeNTest)
+		public static void EndTest(String CloseTest)
 		{
-			logger.info(OpeNTest);
-			test.log(LogStatus.INFO, OpeNTest);
+			logger.info(CloseTest);
+			test.log(LogStatus.INFO, CloseTest);
 		}
 	
 	//Switch Browser
@@ -150,9 +178,42 @@ public class BaseFunction
 		return driverIE;
 	}
 	
-	public String timeStamp()
+	public static String timeStamp()
 	{
 		String ThetimeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 		return ThetimeStamp;	
+	}
+
+	//*********************Annotations from Test class******************************* 
+	@Rule public TestName name =new TestName();
+	
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception 
+	{
+		InitBrowser(getData("BrowserType"));
+		InstanceReports();
+		pageObjects.managePages.init();
+	}
+	
+	@After
+	public void DoAfterTest()
+	{
+		EndTest("End of Test!!!");
+		FinalizedreportTest();
+	}
+	
+	@Before
+	public void DoBeforeTest()
+	{
+		initReportTest(name.getMethodName().split("_")[0],CommonFunction.SeperateString(name.getMethodName().split("_")[1]));
+		
+		
+	}
+	
+	@AfterClass
+	public static void setUpAfterClass()
+	{
+		FinalizeExtentReport();
+		driver.quit();
 	}
 }

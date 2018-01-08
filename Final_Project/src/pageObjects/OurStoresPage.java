@@ -3,13 +3,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-
 import projectUtilities.BaseFunction;
 import projectUtilities.CommonFunction;
 
 public class OurStoresPage extends BaseFunction
 {
-	CommonFunction cf = new CommonFunction();
 	private String StoreImage;
 	private String StoreDirectionsMiami;
 	private String ClosePopup;
@@ -50,13 +48,13 @@ public class OurStoresPage extends BaseFunction
 			 ClosePopup = "ClosePopup.png";
 		}
 		ValueSendToreport = StoreLink.getText();
-		cf.test_Scroll_Page_Down();
-		cf.ClickOnElement(StoreLink,ValueSendToreport);
-		cf.verifyElementExist(MapDiv);
-		cf.verifyImageExists(StoreImage);
-		cf.clickOnImage(StoreImage);
-		cf.verifyImageExists(StoreDirectionsMiami);
-		cf.verifyImageExists(ClosePopup);
-		cf.clickOnImage(ClosePopup);
+		CommonFunction.test_Scroll_Page_Down();
+		CommonFunction.ClickOnElement(StoreLink,ValueSendToreport);
+		CommonFunction.verifyElementExist(MapDiv);
+		CommonFunction.verifyImageExists(StoreImage);
+		CommonFunction.clickOnImage(StoreImage);
+		CommonFunction.verifyImageExists(StoreDirectionsMiami);
+		CommonFunction.verifyImageExists(ClosePopup);
+		CommonFunction.clickOnImage(ClosePopup);
 	}
 }

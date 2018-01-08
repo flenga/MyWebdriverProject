@@ -26,18 +26,18 @@ import static org.junit.Assert.fail;
 public class CommonFunction extends BaseFunction
 {
 	static Logger logger=Logger.getLogger(CommonFunction.class);
-	public String Month;
-	public String DAY;
-	public String Year;
+	public static String Month;
+	public static String DAY;
+	public static String Year;
 	HSSFWorkbook wb;
 	HSSFSheet sheet;
 	static Robot robot;
 	public  Sheet wrksheet;
-	public  Workbook wrkbook = null;
+	public static  Workbook wrkbook = null;
 	public static Hashtable<String, Integer> dict = new Hashtable<String, Integer>();
 
 	//Read from Excel file currently is used in two test cases(test_2_Siginin and test_3_SendContactUsForm)
-	public void ReadExcelFile() throws IOException
+	public static void ReadExcelFile() throws IOException
 	{
 		try 
 		{
@@ -53,9 +53,13 @@ public class CommonFunction extends BaseFunction
 			e.getMessage();
 		}
 	}	
-
+	public static String SeperateString(String Description) 
+	{
+		String sss=Description.replaceAll("([a-z]+)([A-Z])", "$1 $2");
+		return sss;
+	}
 	//File-Up loader function to use to upload computers file. 
-	public void setClipboardData(String string) throws Exception 
+	public static void setClipboardData(String string) throws Exception 
 	{
 		robot=new Robot();
 		try {
@@ -80,7 +84,7 @@ public class CommonFunction extends BaseFunction
 	}
 
 	// Drop down 
-	public void SelectDropdown(WebElement selection,String ValueForSelection) throws Exception
+	public static void SelectDropdown(WebElement selection,String ValueForSelection) throws Exception
 	{
 		try 
 		{
@@ -98,7 +102,7 @@ public class CommonFunction extends BaseFunction
 	}
 
 	//Find date elements
-	public void SplitTheDate(String FullDate)
+	public static void SplitTheDate(String FullDate)
 	{
 		String[] temDate=FullDate.split("/");
 		DAY=temDate[0];
@@ -107,7 +111,7 @@ public class CommonFunction extends BaseFunction
 	}
 
 	//Scroll down
-	public void test_Scroll_Page_Down() throws Exception 
+	public static void test_Scroll_Page_Down() throws Exception 
 	{
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollTo(0, document.body.scrollHeight);"); 
@@ -115,7 +119,7 @@ public class CommonFunction extends BaseFunction
 	}
 
 	//Click on Web Element 
-	public  void ClickOnElement(WebElement ElementToClick,String stringToAddtoReport) throws Exception
+	public static void ClickOnElement(WebElement ElementToClick,String stringToAddtoReport) throws Exception
 	{
 		try
 		{
@@ -131,7 +135,7 @@ public class CommonFunction extends BaseFunction
 	}
 
 	// Send key function from input field
-	public void SendKeyAction(WebElement Element,String ValueToSend,String ValueToreport) throws Exception //Fill field function
+	public static void SendKeyAction(WebElement Element,String ValueToSend,String ValueToreport) throws Exception //Fill field function
 	{
 		try
 		{
@@ -147,7 +151,7 @@ public class CommonFunction extends BaseFunction
 	}
 
 	//waitToElement
-	public void waitToElement(WebElement ElementToWait) throws Exception
+	public static void waitToElement(WebElement ElementToWait) throws Exception
 	{
 		try 
 		{
@@ -168,7 +172,7 @@ public class CommonFunction extends BaseFunction
 	}	
 
 	//Assertion equal
-	public void asserequal(String Expected,String Actual) throws Exception
+	public static void asserequal(String Expected,String Actual) throws Exception
 	{
 		try
 		{
@@ -186,7 +190,7 @@ public class CommonFunction extends BaseFunction
 	}
 
 	//asserNotequal
-	public void asserNotequal(String Expected,String Actual) throws Exception
+	public static void asserNotequal(String Expected,String Actual) throws Exception
 	{
 		try
 		{
@@ -202,7 +206,7 @@ public class CommonFunction extends BaseFunction
 	}
 
 	// Function that verify results using DDT Currently using in 2 test (logIn test and Contact us test) 
-	public void NoErrorMessageExist(WebElement Message, String expectedColor,String ExpectedString) throws Exception
+	public static void NoErrorMessageExist(WebElement Message, String expectedColor,String ExpectedString) throws Exception
 	{
 		String message=Message.getText();
 		try
@@ -225,7 +229,7 @@ public class CommonFunction extends BaseFunction
 	}
 
 	// Verify if element exist in page
-	public boolean verifyElementExist(WebElement elementExist) throws Exception, IOException, ParserConfigurationException, SAXException
+	public static boolean verifyElementExist(WebElement elementExist) throws Exception, IOException, ParserConfigurationException, SAXException
 	{
 		String VerifyElement="";
 		try
@@ -245,7 +249,7 @@ public class CommonFunction extends BaseFunction
 	}
 		
 	//Check if element contain text
-	public void verifyTextInElement( WebElement elementExistInPage ,String StringToFind) throws Exception 
+	public static void verifyTextInElement( WebElement elementExistInPage ,String StringToFind) throws Exception 
 	{
 		String ElementExistInPage=elementExistInPage.getText();	
 		try
@@ -263,7 +267,7 @@ public class CommonFunction extends BaseFunction
 	}
 
 	//Clicking on image using Sikuli
-	public void clickOnImage(String imageName) throws Exception
+	public static void clickOnImage(String imageName) throws Exception
 	{
 		String imageNameToClick=imageName;
 		try
@@ -282,7 +286,7 @@ public class CommonFunction extends BaseFunction
 	}
 
 	//Verify if image exist on page!
-	public boolean verifyImageExists(String imageName)  throws IOException, ParserConfigurationException, SAXException, Exception
+	public static boolean verifyImageExists(String imageName)  throws IOException, ParserConfigurationException, SAXException, Exception
 
 	{
 		String imageNameToVerify = imageName;	
@@ -303,7 +307,7 @@ public class CommonFunction extends BaseFunction
 		}
 	}
 	
-	public void SearchResult(WebElement Message) throws Exception
+	public static void SearchResult(WebElement Message) throws Exception
 	{
 		String message=Message.getText();
 		String ExpectedMessage = "0 results have been found.";

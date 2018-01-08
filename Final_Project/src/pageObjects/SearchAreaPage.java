@@ -12,9 +12,7 @@ public class SearchAreaPage extends BaseFunction
 {
 	public String ShoppingCartAfter;
 	public String ValuToreport;
-	CommonFunction cf = new CommonFunction();
-	SearchToShoppingCartPage Stsc = new SearchToShoppingCartPage();
-
+	
 	@FindBy(how = How.ID,using = "search_query_top") 
 	public WebElement SearchBar;
 
@@ -74,11 +72,11 @@ public class SearchAreaPage extends BaseFunction
 	public void SearchForAnItemAndAddToShoppingCart() throws Exception
 	{
 		ValuToreport = SearchBar.getAttribute("placeholder");
-		cf.SendKeyAction(SearchBar,TermSearch ,ValuToreport);
+		CommonFunction.SendKeyAction(SearchBar,TermSearch ,ValuToreport);
 		ValuToreport = ShoppingCart.getText();
-		cf.ClickOnElement(SubmitButton,ValuToreport);
-		cf.waitToElement(SearchTerm);
-		cf.SearchResult(SearchResult);
+		CommonFunction.ClickOnElement(SubmitButton,ValuToreport);
+		CommonFunction.waitToElement(SearchTerm);
+		CommonFunction.SearchResult(SearchResult);
 		if(!ListView.isSelected())
 		{
 			ListView.click();
@@ -88,16 +86,16 @@ public class SearchAreaPage extends BaseFunction
 		{
 			ListView.click();
 			ValuToreport = AddToCartButton.getText();
-			cf.ClickOnElement(AddToCartButton,ValuToreport);
-			cf.waitToElement(ShoppingCartDiv);
+			CommonFunction.ClickOnElement(AddToCartButton,ValuToreport);
+			CommonFunction.waitToElement(ShoppingCartDiv);
 			try 
 			{
-				cf.verifyElementExist(TitleShoppingDiv1);
-				cf.asserequal( TitleShoppingDiv1.getText(),TitleInShoppingDiv);
-				cf.asserequal(TotalProducts1.getText(),ProductPrice);
-				cf.asserequal(Totalshipping.getText(),ShippingPrice);
-				cf.asserequal(TotalIncluds.getText(),TotalPrice);
-				cf.asserequal(ProductTitle.getText(),ProductName);
+				CommonFunction.verifyElementExist(TitleShoppingDiv1);
+				CommonFunction.asserequal( TitleShoppingDiv1.getText(),TitleInShoppingDiv);
+				CommonFunction.asserequal(TotalProducts1.getText(),ProductPrice);
+				CommonFunction.asserequal(Totalshipping.getText(),ShippingPrice);
+				CommonFunction.asserequal(TotalIncluds.getText(),TotalPrice);
+				CommonFunction.asserequal(ProductTitle.getText(),ProductName);
 				logger.info("The Elements are displayed on page!!");
 				test.log(LogStatus.PASS, "The Elements: are displayed on page!!");
 			} 
@@ -109,9 +107,9 @@ public class SearchAreaPage extends BaseFunction
 			}
 		}
 
-		cf.waitToElement(CloseDiv);
+		CommonFunction.waitToElement(CloseDiv);
 		String ValueSendToreport = CloseDiv.getAttribute("title");
-		cf.ClickOnElement(CloseDiv,ValueSendToreport);
+		CommonFunction.ClickOnElement(CloseDiv,ValueSendToreport);
 		try 
 		{
 			ShoppingCartAfter = ShoppingCart.getText();

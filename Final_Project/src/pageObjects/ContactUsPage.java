@@ -11,7 +11,6 @@ import projectUtilities.CommonFunction;
 
 public class ContactUsPage  extends BaseFunction
 {
-	CommonFunction cf = new CommonFunction();
 	HeaderAreaPage haa = new HeaderAreaPage();
 	public String ValuToreport;
 	public WebDriver driver;
@@ -59,27 +58,27 @@ public class ContactUsPage  extends BaseFunction
 		 to collect the data getCell(4,i) the first number represent the column
 		 and the second value represent the row. 
 		 */
-		cf.ReadExcelFile();
-		int rowcount = cf.wrkbook.getSheet(1).getRows();
+		CommonFunction.ReadExcelFile();
+		int rowcount = CommonFunction.wrkbook.getSheet(1).getRows();
 		for(int i=1;i<=rowcount;i++)
 		{
 			try 
 			{
-				String ExpectedColor = cf.wrkbook.getSheet(0).getCell(4,i).getContents();
-				String  ExpectedMessage1 = cf.wrkbook.getSheet(0).getCell(5,i).getContents();
-				cf.SelectDropdown(SubjectDopdown, cf.wrkbook.getSheet(0).getCell(1,i).getContents());
+				String ExpectedColor = CommonFunction.wrkbook.getSheet(0).getCell(4,i).getContents();
+				String  ExpectedMessage1 = CommonFunction.wrkbook.getSheet(0).getCell(5,i).getContents();
+				CommonFunction.SelectDropdown(SubjectDopdown, CommonFunction.wrkbook.getSheet(0).getCell(1,i).getContents());
 				ValuToreport = email.getAttribute("id");
-				cf.SendKeyAction(email,cf.wrkbook.getSheet(0).getCell(0,i).getContents(),ValuToreport);
+				CommonFunction.SendKeyAction(email,CommonFunction.wrkbook.getSheet(0).getCell(0,i).getContents(),ValuToreport);
 				ValuToreport = OrderRef.getAttribute("id");
-				cf.SendKeyAction(OrderRef,"123456",ValuToreport);
+				CommonFunction.SendKeyAction(OrderRef,"123456",ValuToreport);
 				ValuToreport = fileUploadButton.getAttribute("name");
-				cf.ClickOnElement(fileUploadButton,ValuToreport);
+				CommonFunction.ClickOnElement(fileUploadButton,ValuToreport);
 				Thread.sleep(300);	
-				cf.setClipboardData(cf.wrkbook.getSheet(0).getCell(2,i).getContents()+"Picture016.jpg");
+				CommonFunction.setClipboardData(CommonFunction.wrkbook.getSheet(0).getCell(2,i).getContents()+"Picture016.jpg");
 				ValuToreport = message.getAttribute("name");
-				cf.SendKeyAction(message,cf.wrkbook.getSheet(0).getCell(3,i).getContents(),ValuToreport);
+				CommonFunction.SendKeyAction(message,CommonFunction.wrkbook.getSheet(0).getCell(3,i).getContents(),ValuToreport);
 				ValuToreport = SubmitMessage.getAttribute("name");
-				cf.ClickOnElement(SubmitMessage,ValuToreport);
+				CommonFunction.ClickOnElement(SubmitMessage,ValuToreport);
 				logger.info("ContactUs Form submitted!");
 				test.log(LogStatus.PASS, "ContactUs form submitted!");
 				/*
@@ -88,11 +87,11 @@ public class ContactUsPage  extends BaseFunction
 				 */
 				if(ExpectedColor.equals("red"))
 				{
-					cf.NoErrorMessageExist(ErrorDiv, ExpectedColor,ExpectedMessage1);
+					CommonFunction.NoErrorMessageExist(ErrorDiv, ExpectedColor,ExpectedMessage1);
 				}	
 				else
 				{
-					cf.NoErrorMessageExist(SuccessDiv, ExpectedColor,ExpectedMessage1);
+					CommonFunction.NoErrorMessageExist(SuccessDiv, ExpectedColor,ExpectedMessage1);
 				}
 				if(i<rowcount)
 				{

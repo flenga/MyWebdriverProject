@@ -7,7 +7,6 @@ import projectUtilities.CommonFunction;
 
 public class HeaderAreaPage extends BaseFunction
 {
-CommonFunction cf = new CommonFunction();
 	
 	public String ValuToreport;
 	@FindBy(how = How.LINK_TEXT, using = "Sign in")
@@ -35,30 +34,30 @@ CommonFunction cf = new CommonFunction();
 	public void ClickOnSignIn() throws Exception 
 	{
 		ValuToreport=SignInLink.getText();
-		cf.ClickOnElement(SignInLink,ValuToreport);
+		CommonFunction.ClickOnElement(SignInLink,ValuToreport);
 	}
 	
 	public void ClickOnContactUs() throws Exception 
 	{
 		ValuToreport=ContactUs.getText();
-		cf.ClickOnElement (ContactUs,ValuToreport);
+		CommonFunction.ClickOnElement (ContactUs,ValuToreport);
 	}
 	
 	public void ClickOnCustomerName() throws Exception 
 	{
 		ValuToreport=ContactUs.getText();
-		cf.ClickOnElement (UserName,ValuToreport);
+		CommonFunction.ClickOnElement (UserName,ValuToreport);
 	}
 	
 	public void ClickOnSignOut() throws Exception 
 	{
 		ValuToreport=SignOut.getText();
-		cf.ClickOnElement (SignOut,ValuToreport);
+		CommonFunction.ClickOnElement (SignOut,ValuToreport);
 	}
 	
 	public void ClickOnLogoSite() throws Exception 
 	{
 		ValuToreport=SiteLogo.getText();
-		cf.ClickOnElement(SiteLogo,ValuToreport);
+		CommonFunction.ClickOnElement(SiteLogo,ValuToreport);
 	}
 }

@@ -4,13 +4,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import com.relevantcodes.extentreports.LogStatus;
-
 import projectUtilities.BaseFunction;
 import projectUtilities.CommonFunction;
 
 public class SignInPage  extends BaseFunction
 {
-	CommonFunction cf = new CommonFunction();
 	public String ValuToreport;
 	public WebDriver driver;
 	
@@ -54,20 +52,20 @@ public class SignInPage  extends BaseFunction
 		*refer to the second tab in the file, running through a loop
 		*to collect the data getCell(4,i) the first number represent the column and the second value represent the row.   
 		*/
-		cf.ReadExcelFile();
-		int rowcount = cf.wrkbook.getSheet(1).getRows();
+		CommonFunction.ReadExcelFile();
+		int rowcount = CommonFunction.wrkbook.getSheet(1).getRows();
 		String ExpectedColor;
 		String  ExpectedMessage;
 		for(int i=1;i<rowcount;i++)
 		{
 			try
 			{
-				ExpectedColor = cf.wrkbook.getSheet(1).getCell(2,i).getContents();
-				ExpectedMessage = cf.wrkbook.getSheet(1).getCell(3,i).getContents();
+				ExpectedColor = CommonFunction.wrkbook.getSheet(1).getCell(2,i).getContents();
+				ExpectedMessage = CommonFunction.wrkbook.getSheet(1).getCell(3,i).getContents();
 				ValuToreport = Emailaddress.getAttribute("name");
-				cf.SendKeyAction(Emailaddress,cf.wrkbook.getSheet(1).getCell(0,i).getContents(),ValuToreport);	
+				CommonFunction.SendKeyAction(Emailaddress,CommonFunction.wrkbook.getSheet(1).getCell(0,i).getContents(),ValuToreport);	
 				ValuToreport = Password.getAttribute("name");
-				cf.SendKeyAction(Password,cf.wrkbook.getSheet(1).getCell(1,i).getContents(),ValuToreport);	
+				CommonFunction.SendKeyAction(Password,CommonFunction.wrkbook.getSheet(1).getCell(1,i).getContents(),ValuToreport);	
 				SignInButton.click();
 				/*
 				 * This check if the error is green or red and according to the color 
@@ -76,9 +74,9 @@ public class SignInPage  extends BaseFunction
 				
 				if(ExpectedColor.equals("green"))
 				{
-					cf.NoErrorMessageExist(SuccessLogin,ExpectedColor,ExpectedMessage);
-					logger.info("Cradiantial "+ cf.wrkbook.getSheet(1).getCell(0,i).getContents() +", and Password: "+ cf.wrkbook.getSheet(1).getCell(1,i).getContents() +"were OK");
-					test.log(LogStatus.PASS, "Cradiantial "+ cf.wrkbook.getSheet(1).getCell(0,i).getContents() +", and Password: "+ cf.wrkbook.getSheet(1).getCell(1,i).getContents() +"were OK and user login to ");
+					CommonFunction.NoErrorMessageExist(SuccessLogin,ExpectedColor,ExpectedMessage);
+					logger.info("Cradiantial "+ CommonFunction.wrkbook.getSheet(1).getCell(0,i).getContents() +", and Password: "+ CommonFunction.wrkbook.getSheet(1).getCell(1,i).getContents() +"were OK");
+					test.log(LogStatus.PASS, "Cradiantial "+ CommonFunction.wrkbook.getSheet(1).getCell(0,i).getContents() +", and Password: "+ CommonFunction.wrkbook.getSheet(1).getCell(1,i).getContents() +"were OK and user login to ");
 					
 					if(SignOut.isDisplayed())
 					{
@@ -88,11 +86,11 @@ public class SignInPage  extends BaseFunction
 				}
 				else 										
 				{
-					cf.NoErrorMessageExist(ErrorForSignInSpecific,ExpectedColor,ExpectedMessage);
-					logger.info("Cradiantial "+ cf.wrkbook.getSheet(1).getCell(0,i).getContents() +", and Password: "+ cf.wrkbook.getSheet(1).getCell(1,i).getContents() +"were OK - Which FAILED to login");
-					test.log(LogStatus.PASS, "Cradiantial "+ cf.wrkbook.getSheet(1).getCell(0,i).getContents() +", and Password: "+ cf.wrkbook.getSheet(1).getCell(1,i).getContents() +"were OK - Which FAILED to login");
+					CommonFunction.NoErrorMessageExist(ErrorForSignInSpecific,ExpectedColor,ExpectedMessage);
+					logger.info("Cradiantial "+ CommonFunction.wrkbook.getSheet(1).getCell(0,i).getContents() +", and Password: "+ CommonFunction.wrkbook.getSheet(1).getCell(1,i).getContents() +"were OK - Which FAILED to login");
+					test.log(LogStatus.PASS, "Cradiantial "+ CommonFunction.wrkbook.getSheet(1).getCell(0,i).getContents() +", and Password: "+ CommonFunction.wrkbook.getSheet(1).getCell(1,i).getContents() +"were OK - Which FAILED to login");
 					ValuToreport = SignIn.getAttribute("title");
-					cf.ClickOnElement(SignIn,ValuToreport);
+					CommonFunction.ClickOnElement(SignIn,ValuToreport);
 				}
 			} 
 			catch (Exception e) 

@@ -10,7 +10,6 @@ import projectUtilities.CommonFunction;
 
 public class RegistrationPage extends BaseFunction
 {
-	CommonFunction cf = new CommonFunction();
 	public static WebDriver driver;
 	public String ValuToreport;
 	@FindBy(how = How.NAME, using = "id_gender")
@@ -51,25 +50,25 @@ public class RegistrationPage extends BaseFunction
 	
 	public void FindElementsOnPage() throws Throwable
 	{
-		cf.SplitTheDate("23/8/1956");
+		CommonFunction.SplitTheDate("23/8/1956");
 		ValuToreport=FirstName.getAttribute("name");
-		cf.SendKeyAction(FirstName,"fab",ValuToreport);
+		CommonFunction.SendKeyAction(FirstName,"fab",ValuToreport);
 		ValuToreport=LastName.getAttribute("name");
-		cf.SendKeyAction(LastName,"fabo",ValuToreport);
+		CommonFunction.SendKeyAction(LastName,"fabo",ValuToreport);
 		ValuToreport=LastName.getAttribute("name");
-		cf.SendKeyAction(Email,"publisherpete4@gmail.com",ValuToreport);
+		CommonFunction.SendKeyAction(Email,"publisherpete4@gmail.com",ValuToreport);
 		Thread.sleep(700);
 		ValuToreport=LastName.getAttribute("name");
-		cf.SendKeyAction(Password,"12345",ValuToreport);
-		cf.SelectDropdown(Monthdropdown, cf.Month);
-		cf.SelectDropdown(Daysdropdown, cf.DAY);
-		cf.SelectDropdown(Yeardropdown, cf.Year);
+		CommonFunction.SendKeyAction(Password,"12345",ValuToreport);
+		CommonFunction.SelectDropdown(Monthdropdown, CommonFunction.Month);
+		CommonFunction.SelectDropdown(Daysdropdown, CommonFunction.DAY);
+		CommonFunction.SelectDropdown(Yeardropdown, CommonFunction.Year);
 		ValuToreport=RadioButtonSex.get(1).getAttribute("name");
-		cf.ClickOnElement(RadioButtonSex.get(1),ValuToreport);
+		CommonFunction.ClickOnElement(RadioButtonSex.get(1),ValuToreport);
 		ValuToreport=RegisterButton.getAttribute("innerHTML");
-		cf.ClickOnElement(RegisterButton,ValuToreport);
-		cf.waitToElement(ErrorMessage);  
-		cf.verifyElementExist(ErrorMessage);
+		CommonFunction.ClickOnElement(RegisterButton,ValuToreport);
+		CommonFunction.waitToElement(ErrorMessage);  
+		CommonFunction.verifyElementExist(ErrorMessage);
 		Thread.sleep(500);
 	}
 }

@@ -9,7 +9,6 @@ import projectUtilities.CommonFunction;
 
 public class SearchToShoppingCartPage extends BaseFunction
 {
-	CommonFunction cf = new CommonFunction();
 	
 	private String ValueSendToreport;
 	public String ShoppingCartAfter;
@@ -50,7 +49,7 @@ public class SearchToShoppingCartPage extends BaseFunction
 	public void VerifyElementIndiv() throws Exception
 	{
 		ValueSendToreport = CloseDiv.getAttribute("title");
-		cf.ClickOnElement(CloseDiv,ValueSendToreport);
+		CommonFunction.ClickOnElement(CloseDiv,ValueSendToreport);
 		try 
 		{
 			ShoppingCartAfter = ShoppingCart.getText();
