@@ -206,7 +206,7 @@ public class BaseFunction
 	public void DoBeforeTest()
 	{
 		initReportTest(name.getMethodName().split("_")[0],CommonFunction.SeperateString(name.getMethodName().split("_")[1]));
-		
+		StartTest(CommonFunction.SeperateString("This is test :"+name.getMethodName().split("_")[0]+", And the description: "+name.getMethodName().split("_")[1]));
 		
 	}
 	
