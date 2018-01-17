@@ -56,7 +56,7 @@ public class CommonFunction extends BaseFunction
 	public static String SeperateString(String Description) 
 	{
 		String TheNewDescription=Description.replaceAll("([a-z]+)([A-Z])", "$1 $2");
-		return TheNewDescription;
+		return TheNewDescription.substring(0, 1).toUpperCase()+TheNewDescription.substring(1).toLowerCase();
 	}
 	//File-Up loader function to use to upload computers file. 
 	public static void setClipboardData(String string) throws Exception 
